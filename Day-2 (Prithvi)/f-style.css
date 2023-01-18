@@ -1,0 +1,145 @@
+main {
+  width: 85%;
+  margin: auto;
+  border: 2px solid black;
+}
+main img {
+  width: 100%;
+}
+#grid_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+#ref {
+  margin: 10px;
+}
+#ref > a {
+  text-decoration: none;
+}
+#ref > pre {
+  display: inline;
+}
+main > img {
+  margin: 30px 0px;
+}
+#second_img {
+  margin: 70px 0px;
+  cursor: pointer;
+}
+
+.carousel-inner {
+  cursor: pointer;
+}
+
+main h2 {
+  text-align: center;
+  margin: 30px;
+}
+.grid-2 {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  height: 230px;
+  align-items: center;
+  margin: auto;
+}
+
+.item > img {
+  width: 50%;
+}
+
+.grid-3 {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+  cursor: pointer;
+}
+.grid-3 > img {
+  width: 70%;
+}
+.flex-1 {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin-top: 90px;
+}
+
+.flex-1 > img {
+  width: 48%;
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+.flex-1 > img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.flex-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.flex-2 img,
+.flex-2 h6 {
+  cursor: pointer;
+}
+.items > img {
+  width: 100%;
+}
+.items {
+  padding: 20px;
+  transition: all 0.5s ease-in 0.1s;
+}
+.items:hover {
+  transform: scaleY(1.1);
+}
+#content {
+  width: 60%;
+  line-height: 1.4;
+  font-size: 14px;
+}
+#content > h6 {
+  margin-top: 20px;
+}
+.last_item {
+  margin: 20px;
+}
+.lflex {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.lflex > a {
+  color: black;
+  text-decoration: none;
+}
+.lflex > a:hover {
+  text-decoration: underline;
+}
+.grid-4 {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.grid-4 > img {
+  width: 70%;
+}
+#title {
+  margin: 15px 0px;
+}
+#smallblock {
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+#smallblock:hover {
+  transform: skew(5deg);
+}
