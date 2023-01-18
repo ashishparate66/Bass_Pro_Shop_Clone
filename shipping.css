@@ -1,0 +1,57 @@
+* {
+    font-family: sans-serif;
+    font-weight: 400;
+
+}
+
+#main_div {
+    border: 1px solid red;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.accordion-flush {
+    width: 60%;
+    border: 1px solid green;
+}
+
+#second_div_shiiping {
+    width: 30%;
+    height: 500px;
+    border: 1px solid blue;
+}
+
+/* first dropdown tab  */
+#h4_sub_heading {
+    margin-left: 20px;
+}
+
+#form {
+    line-height: 30px;
+
+}
+
+#form input {
+    width: 90%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#form #submit {
+    width: 15%;
+    background-color: #213629;
+    border: none;
+    color: white;
+
+}
+
+#submit_div {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 25px;
+}
+
+#submit_div input {}
