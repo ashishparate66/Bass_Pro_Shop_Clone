@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "email": "kalejayesh20@gmail.com",
+      "password": "1234",
+      "verified": "1234",
+      "remember": "on",
+      "country": "India",
+      "firstName": "jayesh",
+      "Lastname": "kale",
+      "street": "jeur",
+      "city": "Ahmednagar",
+      "zip": "414601",
+      "phone": "9999999999",
+      "DOB": "1999-09-20",
+      "intresteArray": [
+        "Fishing",
+        "camping",
+        "LadiesClothing",
+        "OutdoorRecreation",
+        "Hunting",
+        "Shoes&Boots",
+        "Email Surveys"
+      ],
+      "id": 1
+    },
+    {
+      "email": "kalejayesh12@gmail.com",
+      "password": "12345",
+      "verified": "12345",
+      "remember": "on",
+      "country": "India",
+      "firstName": "jayesh",
+      "Lastname": "kale",
+      "street": "jeur",
+      "city": "Ahmednagar",
+      "zip": "414601",
+      "phone": "9999999999",
+      "DOB": "1999-09-20",
+      "intresteArray": [
+        "Fishing",
+        "camping",
+        "LadiesClothing",
+        "OutdoorRecreation",
+        "Hunting",
+        "Shoes&Boots",
+        "Email Surveys"
+      ],
+      "id": 2
+    },
+    {
+      "email": "kalejayesh12@gmail.com",
+      "password": "1234",
+      "verified": "1234",
+      "remember": "on",
+      "country": "India",
+      "firstName": "jayesh",
+      "Lastname": "kale",
+      "street": "jeur",
+      "city": "Ahmednagar",
+      "zip": "414601",
+      "phone": "9999999999",
+      "DOB": "1999-09-20",
+      "intresteArray": [
+        "Fishing",
+        "camping",
+        "LadiesClothing",
+        "OutdoorRecreation",
+        "Hunting",
+        "Shoes&Boots",
+        "Email Surveys"
+      ],
+      "id": 3
+    }
+  ]
+}

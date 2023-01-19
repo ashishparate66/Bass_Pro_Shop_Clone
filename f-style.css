@@ -137,7 +137,7 @@ main h2 {
   margin: 15px 0px;
 }
 #smallblock {
-  transition: all 0.6s ease-in-out 0.2s;
+  transition: all 0.3s ease-in-out 0.1s;
 }
 
 #smallblock:hover {
