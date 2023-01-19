@@ -1,0 +1,123 @@
+/**
+ * Fetch micro frontend information from cloud8
+ * @param {Object} cloud8RegistryConfig
+ * @param {String} apps
+ * @returns a promise
+ */
+function getFromCloud8Registry(cloud8RegistryConfig, apps) {
+  var registryUrl = cloud8RegistryConfig.cloud8BaseUrl + cloud8RegistryConfig.cloud8RegistryPath;
+  var params = Object.assign({
+    apps: apps.join(',')
+  },
+    cloud8RegistryConfig.params
+  );
+
+  return new Promise(function (resolve, reject) {
+    jQuery.get(registryUrl, params)
+      .done(resolve)
+      .fail(reject)
+  });
+}
+
+/**
+ * Fetch public url for micro frontend
+ * @param {Object} registryServiceConfig
+ * @param {String} appName
+ * @param {String} appVersion
+ * @returns a promise
+ */
+function getRegistryInfo(registryServiceConfig, appName, appVersion) {
+  try {
+    var localRegistryServiceConfig = localStorage.getItem('vcc-local-registry-service');
+    if (localRegistryServiceConfig) {
+      registryServiceConfig = Object.assign(
+        JSON.parse(JSON.stringify(registryServiceConfig)),
+        JSON.parse(localRegistryServiceConfig)
+      );
+    }
+  } catch (err) {
+    // Access is denied for localStorage
+    console.error(err)
+  }
+  return getFromCloud8Registry(registryServiceConfig, [appName + '@' + appVersion])
+    .then(function (registryResponse) {
+      return registryResponse.content.find(function (item) {
+        return item.appName === appName
+      });
+    })
+    .catch(function (err) {
+      console.log('Registry error [' + appName + '@' + appVersion + ']', err)
+    })
+}
+
+/**
+ * Insert micro frontend script in document
+ * @param {String} url
+ * @returns a promise
+ */
+function loadRemoteScript(url) {
+  var docElement = document;
+  var scriptElement = docElement.createElement('script');
+  scriptElement.src = url;
+  scriptElement.type = 'text/javascript';
+  scriptElement.async = true;
+  if (docElement.readyState === 'complete') {
+    docElement.body.appendChild(scriptElement);
+  } else {
+    docElement.addEventListener('readystatechange', function () {
+      if (docElement.readyState === 'complete') {
+        docElement.body.appendChild(scriptElement);
+      }
+    });
+  }
+
+  return new Promise(function (resolve, reject) {
+    scriptElement.onload = resolve;
+    scriptElement.onerror = reject;
+  });
+}
+
+function initAppScript(appInfo) {
+  var appUrl = appInfo && appInfo.publicUrl + 'vcc-guest-chat.js'
+  return appInfo && loadRemoteScript(appUrl)
+}
+
+/**
+ * Load GuestChat App base on config
+ * @param {Object} config
+ * @returns the guest chat app
+ */
+function loadGuestChatApp(config) {
+  var appLoader;
+  var appInfo;
+  if (config.guestChatBuildVersion) {
+    var publicUrl = 'https://vcc-assets.8x8.com/vcc-guest-chat/' + config.guestChatBuildVersion + '/'
+    appInfo = {
+      publicUrl: publicUrl,
+      appName: "guest-chat",
+      appVersion: config.packageVersion,
+      build: config.guestChatBuildVersion,
+      deploymentDate: Date.now()
+    }
+    appLoader = initAppScript({ publicUrl: publicUrl })
+  } else {
+    appLoader = getRegistryInfo(config.MFERegistryService, 'vcc-guest-chat', '*')
+      .then(function (info) {
+        appInfo = info;
+        return initAppScript(info)
+      })
+  }
+
+  return appLoader
+    .then(function () {
+      var container = window['VCCGuestChat'];
+      return container.get('GuestChat')
+    })
+    .then(function (Module) { return Module().default })
+    .then(function (guestChatApp) {
+      return {
+        appInfo: appInfo,
+        guestChatApp: guestChatApp()
+      };
+    })
+}

@@ -1,0 +1,238 @@
+/* --- Slick Slider ----------------------------------------------- */
+.slick-list {
+        padding: 0px !important;
+}
+.carousel-product {
+    padding: 0px !important;
+    float: left;
+}
+.carousel-product a:hover {
+    text-decoration: none !important;
+}
+
+.carousel-product p {
+    font-size: 13px;
+}
+.carousel-price {
+    font-size: 2em;
+    margin: 0.5em 0;
+    display: block;
+    color: #EE2527;
+}
+@media (max-width: 700px) {
+  .togetherSite nav {
+    background: rgba(0, 0, 0, 0.2);
+    position: relative !important;
+    width: 100%;
+  }
+
+  .togetherSite section .technology img {
+    width: 33%;
+    height: auto;
+  }
+  .togetherSite section .technology a > div {
+    width: 66%;
+    text-align: left;
+  }
+  .togetherSite section .technology a > div * {
+    text-align: left;
+  }
+}  
+/* --- New Product Carousel ----------------------------------------------- */
+.product-carousel {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.product-carousel .btn {
+  display: inline-block !important;
+}
+.product-carousel .carousel-product {
+  padding: 0px 2em;
+  height: auto !important;
+}
+.product-carousel .carousel-product a {
+  display: block;
+  outline: none;
+  padding: 1em;
+  text-align: center;
+}
+.product-carousel .carousel-product img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 300px;
+}
+.product-carousel .carousel-product .pseudoBtn {
+  background: #008000;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 2em;
+  padding: 1em 3em;
+}
+.product-carousel a.prevCarousel, .product-carousel a.nextCarousel {
+  display: block;
+  margin-top: -30px;
+  position: absolute;
+  top: 50%;
+  border: none;
+  width: 40px;
+  height: 60px;
+  outline: none;
+  opacity: 0.5;
+  background-size: contain;
+  z-index: 100;
+}
+.product-carousel a.prevCarousel:hover, .product-carousel a.nextCarousel:hover {
+  opacity: 1;
+}
+.product-carousel a.prevCarousel {
+  background-image: url(https://assetshare.basspro.com/content/dam/bps-general-assets/web/templates/sitelets/images/arrow-left.png);
+  left: -60px;
+}
+.product-carousel a.nextCarousel {
+  background-image: url(https://assetshare.basspro.com/content/dam/bps-general-assets/web/templates/sitelets/images/arrow-right.png);
+  right: -60px;
+}
+
+@media (max-width: 1200px) {
+  .product-carousel {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .product-carousel a.prevCarousel, .product-carousel a.nextCarousel {
+    width: 20px;
+    height: 30px;
+  }
+  .product-carousel a.prevCarousel {
+    left: 0px;
+  }
+  .product-carousel a.nextCarousel {
+    right: 0px;
+  }
+}  
+.product-carousel .carousel-product a:hover{
+    -webkit-box-shadow: 0 25px 30px 0 rgba(0,0,0,.1);
+	box-shadow: 0 25px 30px 0 rgba(0,0,0,.1);
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: .2s all ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.product-carousel .carousel-product a {
+	-webkit-transition: all .15s ease-in-out;
+	-o-transition: .15s all ease-in-out;
+	transition: all .15s ease-in-out;
+}  
+.product-carousel .carousel-product {
+	margin: 0 1em;
+    font-family: Cabin,sans-serif;
+} 
+.product-carousel {
+	max-width: 1280px;
+}
+.product-carousel .slick-track {
+	padding: 3% 0;
+}  
+.product-carousel .carousel-product h3 {
+	color: #1e1d19;
+	display: block;
+	font-size: 18px;
+	line-height: 20px;
+	padding-bottom: 5px;
+	text-align: left;
+	font-weight: normal;
+}
+.carousel-price {
+	font-size: 18px;
+	font-weight: 600;
+	text-align: left;
+	color: #222;
+}
+.savings-message {
+	color: #c50;
+	font-size: 16px;
+	font-weight: 600;
+	margin-top: 8px;
+	text-align: left;
+	display: block;
+}
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* CHANGED */
+.product-carousel .slick-track {
+    padding: 0 0 0 0; /* CHANGE */
+}
+@media (min-width: 1200px) {
+  .product-carousel {
+    width: 90%;
+  }
+}
+/* ADDED */
+.togetherSite h2#productCarousel {
+    font-family: league_gothicregular,Arial,sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #616630;
+    text-align: left;
+    position: relative;
+    text-transform: uppercase;
+}
+.togetherSite h3:hover {
+    text-decoration: underline;
+}
+.togetherSite h3 {
+    display: inline-block;
+    color:#595959;
+    font-family: Open Sans,sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+.togetherSite .carousel-price {
+    color: #000;
+    font-family: Open Sans,sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 900;
+}
+.togetherSite .old_price {
+    color: #9a9a9a;
+    text-decoration: line-through;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+}
+.togetherSite .savings-message {
+    color: #c50;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+/* BADGES */
+.togetherSite .rebate_freeOffer {
+    opacity: 1;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    height: 25px;
+    letter-spacing: .5px;
+    line-height: 14px;
+    margin: 0 8px 8px 0;
+    padding: 5px 8px;
+    background: #737b82;
+    position: relative;
+    z-index: 4;
+    text-align: center;
+}
+.togetherSite .carousel-product {
+  border-top: 1px solid #e5e5e5;
+}
