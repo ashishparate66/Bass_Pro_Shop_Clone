@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>finder-navigation</title>
+    <link rel="stylesheet" href="f2.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <main>
+      <aside>
+        <h4>FILTERD BY</h4>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Brand
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <input id="b1" type="checkbox" />
+                Aqua-Vu (1)
+                <br />
+                <input id="b2" type="checkbox" />
+                Hawkeye (4)
+                <br />
+                <input id="b3" type="checkbox" />
+                IBobber (1)
+                <br />
+                <input id="b4" type="checkbox" />
+                MarCum (10)
+                <br />
+                <input id="b5" type="checkbox" />
+                Raymarine (2)
+                <br />
+                <input id="b6" type="checkbox" />
+                Simrad (8)
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Price
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <input id="p1" type="checkbox" />
+                Less than $1000
+                <br />
+                <input id="p2" type="checkbox" />
+                Between $1000 and $2000
+                <br />
+                <input id="p3" type="checkbox" />
+                Between $2000 and $3000
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Sale
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <input id="sale" type="checkbox" />
+                On sale (8)
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <h4>FISH FINDERS & NAVIGATION</h4>
+        <img
+          src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1673968097/DigitalCreative/2023/Homepage/wk2-1-11/cep-banner.png"
+          alt=""
+        />
+        <div class="flex-1">
+          <h5 id="results">110 Search Results</h5>
+          <select id="sPrice">
+            <option value="">Sort by : <b>Price</b></option>
+            <option value="A-Z">Price (Low to High)</option>
+            <option value="Z-A">Price (High to Low)</option>
+          </select>
+        </div>
+        <div id="grid-1"></div>
+      </section>
+    </main>
+    <div class="bottom">
+      <div class="lflex">
+        <h6>ALSO OF INTEREST:</h6>
+        <a href="#">Winter Clothing</a>
+        <a href="#"> Champions Choose Lowrance</a>
+        <a href="#">Humminbird</a>
+        <a href="#"> Garmin</a>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="findnav.js"></script>

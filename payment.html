@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>payment page</title>
+</head>
+
+<body>
+    <div id="heading_top_billing">
+        <h2>PAYMENT & BILLING</h2>
+    </div>
+    <div id="payment_main">
+        <div id="payment_first">
+            <div id="paypal_img">
+                <a
+                    href="https://www.paypal.com/checkoutnow?token=EC-03X64403GK510211S&krypto=NWB8XABzRRPmk1GhZwOTJRop8skXPMqJffCQ6N%2BKLuChAEn7NClFgBRwhRbEZU1j1lBH7Ii0X5vKQKvBHXSygFazRIaLgl3b2bJc7yI6tiD0aCFG4zSHK7062FHXCzKG6QTZHKO9Bbaq3CFEYn2jVj6iBpsF5NZON3TucuP%2BelkoGf2ZruKa7wasmlDtQf1Pg4BXA%2Byi3tVB8cV4XpCWUDyE991l3lS%2F67DN3aszm2PVjlLkA79nmvMataAaxfjo6LhV49X%2BUhyU42JQNdfQSAjdkVcEfS%2BVwRbBpVsFkZff3hqpDqoIT0APqiFeSZkLYtORb9m1k7FJAnjlFkEEA42gGmeKvdK9CD0ihEyktF61TXmTOF6254HrmiK7L9vq2Swl3n9%2Fnc%2FYqvkkI2P9ExwqF0omAZRMBnRS8qRR770TEa3fS8XuENjwzKqs2xKDqcXiTFA7HmxwIOVW9yyvM1V7KiqwLM5oV9nIbOrQB%2Belyh8aI%2BJmCtFLjBQt1bygpoCUaDNX%2B1g3E4Z%2BEUWjLPsW7DihZeMx2MnwzttVx2Nye%2FUsDer8%2Fo6r%2FCtW1j8aqOhtgFQCdeyDjkUPsEB9oqOcOOng%2BiPJRdMP5gU14X7MADfStaOnw7zSEVzhgS2Wni9N74XkrVuSz5m659%2BDLA%2FpZf95PNH1ZzQbs0uayf8CkIxDKAYw1u%2FK%2BAVYsPBHJM7CS3vo2243Rm%2FXgNH%2FnKOmTQ9j0%2Bs3tw6uRwffmY2CPN54G5sgjguaZJNbOuWHaFRlNiWx%2BJhn5%2Bpn5cN1sohoDwV7xDUStkMXI8Y9m6RZL6mdKNcrdde7hatlx3cP">
+                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-small.png" alt="">
+                </a>
+            </div>
+            <div id="visa_img">
+                <a
+                    href="https://src.mastercard.com/profile/enroll?cmp=us.en-us.nam.mccom.CreateYourProfile&locale=en_US">
+                    <img src="https://src.mastercard.com/assets/img/btn/src_chk_btn_178x032px.svg?locale=en_us&paymentmethod=master,amex,discover,visa&checkoutid=a4a6x1xav2s9ahk20wceu1hk5ytccl5mkg"
+                        alt="">
+                </a>
+            </div>
+
+            <div id="sezzle_img">
+                <a href="">
+                    <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/icons/sezzle/Sezzle_Logo_FullColor-small.png"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4> Credit Cards</h4>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div id="payment_visa_logo">
+                                <img src="https://tse3.mm.bing.net/th?id=OIP.-ibGIjcwpxa9rwcT8I4gLQHaBx&pid=Api&P=0"
+                                    alt="">
+
+                            </div>
+                            <div id="card_input">
+                                <form id="form_card">
+                                    <label>Card Number</label>
+                                    <input type="text" minlength="15" maxlength="16" id="card_number" required>
+                                    <label>Expiration Date</label> <br>
+                                    <input type="month" id="month_year" required> <br>
+                                    <label>CVV</label> <br>
+                                    <input type="text" minlength="3" maxlength="3" id="cvv" required> <br>
+                                    <div id="submit_payment_div">
+                                        <input type="submit" value="SUBMIT" id="submit_payment">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div id="second_part">
+            <div id="payment_second">
+
+            </div>
+            <div id="otp_div">
+                <h4 id="sethere">Your OTP is: <span></span></h4>
+                <div id="otp_container">
+                    <input type="text" id="enter" placeholder="Enter OTP"> <br>
+                    <div id="verify_div">
+                        <button id="verifyBtn">Verify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="payment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,125 @@
+.form_container{
+    width: 40%;
+    margin: auto;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+}
+.Email_input_box>input{
+    width: 98%;
+    height: 30px;
+    /* padding: 50 px; */
+   
+}
+.password_input_box>input{
+    width: 98%;
+    height: 30px;   
+}
+.country_input_box>select{
+    width: 98%;
+    height: 30px;   
+}
+.Fname_input_box>input{
+    width: 98%;
+    height: 30px; 
+}
+.Lname_input_box>input{
+    width: 98%;
+    height: 30px; 
+    
+}
+.street_inputbox>input{
+    width: 98%;
+    height: 30px; 
+
+}
+.city_input_box>input{
+    width: 98%;
+    height: 30px; 
+    
+}
+.state_input_box>input{
+    width: 98%;
+    height: 30px; 
+    
+}
+.zip_input_box>input{
+    width:30%;
+    height: 30px;
+    
+}
+.phone_input_box>input{
+    width:30%;
+    height: 30px;
+    
+}
+.checkbox_container{
+    display: flex;
+    flex-direction: column;
+    /* height: auto; */
+    height: 200px;
+    /* align-items: center; */
+    justify-content: center;
+}
+.checkbox_container>.checkbox{
+display: flex;
+justify-content: space-between;
+
+}
+.check-wrapper{
+    display: flex;
+    justify-content: space-between ;
+    width: 100%;
+    
+}
+
+input[type="checkbox"]{
+    margin: 10px;
+    /* padding: 4px; */
+   
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+  #state{
+    width: 99%;
+   height:40px;
+  }
+  .prefrences{
+    margin: 10px;
+  }
+  .gender{
+    margin: 20px;
+  }
+  input[type="checkbox"]{
+    height: 15px;
+    width: 17px;
+}
+.can-button{
+    background-color:white;
+    border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    color: rgb(37, 36, 36);
+    font-weight: bolder;
+}
+.can-button:hover{
+    background-color: rgb(4, 4, 4);
+    color: white;
+}
+#submit{
+    padding: 10px;
+    color: rgb(22, 21, 21);
+    font-weight: bolder;
+
+}
+#submit:hover{
+    background-color: rgb(4, 4, 4);
+    color: white;
+}
+

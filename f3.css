@@ -1,0 +1,55 @@
+main {
+  width: 80%;
+  margin: auto;
+  border: 2px solid black;
+  display: flex;
+  line-height: 1.6;
+}
+
+section {
+  width: 70%;
+  border: 2px solid green;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+section > img {
+  width: 50%;
+  margin: 50px;
+  align-self: center;
+}
+aside {
+  width: 30%;
+  border: 2px solid red;
+  padding: 20px;
+}
+#odate {
+  display: block;
+  margin-bottom: 50px;
+}
+#btn {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+#btn:hover {
+  background: black;
+  color: white;
+}
+#rate {
+  margin: 10px 0px;
+}
+#accordionFlushExample {
+  margin-top: 120px;
+}
+#flex-sig {
+  display: flex;
+  justify-content: space-between;
+}
+#desc {
+  margin: 20px 0px;
+}

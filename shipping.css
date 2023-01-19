@@ -1,0 +1,267 @@
+* {
+    font-family: sans-serif;
+    font-weight: 400;
+
+}
+#heading_shipping{
+    text-align: center;
+    margin-top: 50px;
+   margin-bottom: 30px;
+}
+
+#main_div {
+
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.accordion-flush {
+    width: 60%;
+}
+
+
+
+/* first dropdown tab  */
+#h4_sub_heading {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+#form {
+    line-height: 30px;
+
+}
+
+#form input {
+    width: 90%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#form #submit {
+    width: 15%;
+    background-color: #213629;
+    border: none;
+    color: white;
+
+}
+
+#submit_div {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 25px;
+}
+
+#form1 {
+    line-height: 30px;
+
+}
+
+#form1 input {
+    width: 90%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#form1 #submit {
+    width: 15%;
+    background-color: #213629;
+    border: none;
+    color: white;
+
+}
+
+
+#second_div_shiiping {
+    width: 35%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+   padding: 0px 15px;
+   padding-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* total price div  */
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#second_table td {
+    padding: 10px 5px;
+}
+
+.total-price table {
+    border-top: 3px solid #213629;
+    border-bottom: 3px solid #213629;
+    width: 100%;
+    max-width:1005;
+}
+
+#second_table td:last-child,
+#second_table th:last-child {
+    text-align: right;
+}
+
+#shipping-free-row {
+    color: red;
+}
+
+
+/* render div rightside */
+.cart-page {
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+#first_table_div {
+    width: 100%;
+  display: flex;
+}
+
+.cart-info {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    font-size: 14px;
+   
+}
+
+.cart-details {
+    width: 100%;  
+}
+
+
+#first_table th {
+    text-align: left;
+    padding: 5px;
+    color: rgb(10, 9, 9);
+    background-color: #f4f3ef;
+    font-size: 18px;
+
+}
+
+#first_table td {
+    padding: 10px 5px;
+}
+
+#first_table td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+#first_table td a {
+    color: rgb(21, 18, 18);
+    text-decoration: none;
+    font-size: 14px;
+    color: red;
+}
+
+#first_table td img {
+    width: 70px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+#first_table td:last-child,
+#first_table th:last-child {
+    text-align: right;
+}
+
+@media only screen and (max-width : 600px){
+    #main_div {
+        width: 90%;
+       display: block;
+        margin: auto;
+        
+    }
+    .accordion-flush {
+        width: 90%;
+    }
+    #second_div_shiiping {
+        width: 90%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #submit_div {
+       
+        justify-content: center;
+        
+        margin-top: 25px;
+    }
+    #form #submit {
+        width: 90%;
+        background-color: #213629;
+        border: none;
+        color: white;
+    
+    }
+    #form1 #submit {
+        width: 90%;
+        background-color: #213629;
+        border: none;
+        color: white;
+    
+    }
+}
+
+/* edit cart button */
+
+#edit_cart_div{
+    display: block;
+    text-align: center;
+}
+#edit_cart_btn:hover{
+    color: white;
+    background-color: #213629;
+}
+
+
+
+@media only screen and (max-width : 1000px){
+    #main_div {
+        width: 80%;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+    #second_div_shiiping {
+        width: 60%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      margin-top: 50px;
+      margin: auto;
+}
+.accordion-flush {
+    width: 60%;
+    margin: auto;
+}
+#submit_div {
+    display: block;
+    justify-content: center;
+   
+}
+#form #submit {
+    width: 100%;
+    background-color: #213629;
+    border: none;
+    color: white;
+
+}
+#form1 #submit {
+    width: 100%;
+    background-color: #213629;
+    border: none;
+    color: white;
+
+}
+}
