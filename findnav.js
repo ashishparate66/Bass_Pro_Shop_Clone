@@ -24,12 +24,12 @@ function arrangeData(data) {
             brand: item.brand,
             price: item.price,
             rating: item.rating,
-            orig: item.orig
+            orig: item.orig,
+            desc: item.description
         }
 
         newData.push(obj)
     });
-
 
     useData(newData)
 
@@ -176,6 +176,25 @@ function arrangeData(data) {
             p1.checked = false
             p2.checked = false
             p3.checked = false
+            let card = document.querySelectorAll("#smallblock")
+            fakeData.forEach((item, index) => {
+                card[index].addEventListener("click", () => {
+                    let arr = []
+                    arr.push(item)
+                    localStorage.setItem("pro", JSON.stringify(arr))
+                    b1.checked = false
+                    b2.checked = false
+                    b3.checked = false
+                    b4.checked = false
+                    b5.checked = false
+                    b6.checked = false
+                    p1.checked = false
+                    p2.checked = false
+                    p3.checked = false
+                    sale.checked = false
+                    window.location.assign("uniproduct.html")
+                })
+            })
         }
         else if (sale.checked == false) {
             useData(newData)
@@ -213,6 +232,25 @@ function useData(data) {
     result.innerText = ""
     result.innerText = `${count} Search Results`
     container.innerHTML = finalData.join("")
+    let card = document.querySelectorAll("#smallblock")
+    data.forEach((item, index) => {
+        card[index].addEventListener("click", () => {
+            let arr = []
+            arr.push(item)
+            localStorage.setItem("pro", JSON.stringify(arr))
+            b1.checked = false
+            b2.checked = false
+            b3.checked = false
+            b4.checked = false
+            b5.checked = false
+            b6.checked = false
+            p1.checked = false
+            p2.checked = false
+            p3.checked = false
+            sale.checked = false
+            window.location.assign("uniproduct.html")
+        })
+    })
 }
 
 function constCard(image, name, price, rating) {
@@ -244,6 +282,7 @@ function offCard(image, name, orig, price,) {
     <img src=${image} alt="" />
     <h6 id="title">${name}</h6>
     <div id="rate">
+    <i class="fa-solid fa-star"></i>
     <i class="fa-solid fa-star"></i>
     <i class="fa-solid fa-star"></i>
     <i class="fa-solid fa-star"></i>
