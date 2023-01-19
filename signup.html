@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./signup.css">
-
+<style>
+   
+</style>
 </head>
 
 <body>
@@ -348,6 +350,7 @@
                     <div class="zip_input_box">
                         <p>ZIP *</p>
                         <input type="number" id="zip">
+                        
                     </div>
                     <div class="phone_input_box">
                         <p>Phone *</p>
@@ -359,15 +362,15 @@
             </div>
 
 
-            <div>
+            <div class="prefrences" id="prefrences">
                 <h3>Preferences</h3>
             </div>
-            <div>
+            <div class="birthday" id="birthday">
                 <p>Birthday (Optional)</p>
                 <input type="date" id="birthdate">
                 <p>Month/Day/Year ex. 01/25/2000</p>
             </div>
-            <div>
+            <div class="gender" id="gender">
                 <p>Gender(optional)</p>
                 <div>
                     <input type="radio" name="gender" value="male">male
@@ -432,7 +435,7 @@
                 <p>By submitting this form I agree to Bass Pro Shops Terms of Use and Community Guidelines.</p>
                 <!-- <input onclick="print" ></inp> -->
                 <input type="submit" id="submit" value="CREATE MY ACCOUNT">
-                <button>CANCEL</button>
+                <button class="can-button">CANCEL</button>
             </div>
         </div>
 
