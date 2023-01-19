@@ -12,9 +12,9 @@ function checkoutPage() {
 let container = document.querySelector(".cart-page")
 let tbody = document.querySelector("table")
 
-function renderCard(qty,price) {
+function renderCard(qty, price) {
     let cardList =
-  `
+        `
         <table id="first_table">
             <tr>
                 <th>Product</th>
@@ -42,14 +42,14 @@ function renderCard(qty,price) {
                 <td>Ship to Address</td>
                 <td><input type="number" value="${qty}"></td>
                 <td>$ ${price}</td>
-                <td>$ ${qty*price}</td>
+                <td>$ ${qty * price}</td>
             </tr>
         </table>
         <div class="total-price">
         <table id="second_table">
             <tr>
                 <td>Product Subtotal</td>
-                <td>$ ${qty*price}</td>
+                <td>$ ${qty * price}</td>
             </tr>
             <tr id="shipping-free-row">
                 <td>Shipping</td>
@@ -57,13 +57,15 @@ function renderCard(qty,price) {
             </tr>
             <tr>
                 <td>Total</td>
-                <td>$ ${qty*price}</td>
+                <td>$ ${qty * price}</td>
             </tr>
 
         </table>
     </div>
     `
-container.innerHTML = cardList
+
+    container.innerHTML = cardList
 
 }
- renderCard(1,300)
+renderCard(1, 300)
+

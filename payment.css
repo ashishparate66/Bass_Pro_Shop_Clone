@@ -1,0 +1,182 @@
+h2 {
+    text-align: center;
+
+}
+
+#heading_top_billing {
+    margin-top: 50px;
+
+}
+
+#payment_main {
+    display: flex;
+    width: 80%;
+
+    margin: auto;
+    gap: 5%;
+    margin-top: 100px;
+}
+
+#payment_first {
+    width: 45%;
+    margin: auto;
+    line-height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+#paypal_img {
+
+    text-align: center;
+    margin-top: 15px;
+}
+
+#paypal_img img {
+    margin: auto;
+    width: 50%;
+    height: 30px;
+
+}
+
+#visa_img {
+
+    text-align: center;
+    margin-top: 15px;
+}
+
+#visa_img img {
+    margin: auto;
+    width: 50%;
+    height: 30px;
+}
+
+#sezzle_img {
+
+    text-align: center;
+    margin-top: 15px;
+}
+
+#sezzle_img img {
+    margin: auto;
+    width: 50%;
+    height: 30px;
+}
+
+/* visa image */
+
+#payment_visa_logo {
+    width: 90%;
+}
+
+#payment_visa_logo img {
+    width: 100%;
+
+}
+
+#card_input {
+    line-height: 50px;
+}
+
+#card_number {
+    width: 90%;
+    height: 40px;
+}
+
+#month_year {
+    height: 40px;
+}
+
+#cvv {
+    height: 40px;
+}
+
+#submit_payment_div {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#submit_payment_div input {
+    width: 25%;
+    background-color: #213629;
+    border: none;
+    color: white;
+}
+#second_part{
+    width: 40%;
+    display: block;
+}
+
+#payment_second {
+   width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    line-height: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: sticky;
+    top: 0;
+    padding: 25px 30px;
+
+}
+#otp_div{
+    width: 80%;
+    margin: auto;
+    margin-top: 0px;
+    line-height: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: sticky;
+    top: 0;
+    padding: 25px 30px;
+    margin-top: 80px;
+    text-align: center;
+}
+#otp_div span{
+    color: red;
+}
+#verify_div{
+    display: flex;
+    justify-content: center;
+}
+#verifyBtn{
+margin: auto;
+margin-top: 20px;
+height: 30px;
+width: 100px;
+border: none;
+color: white;
+background-color: #213629;
+
+}
+
+#billingAppend h5{
+    margin-top: 30px;
+}
+#billingAppend a{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+@media only screen and (max-width : 1000px){
+
+    #payment_main {
+        display: block;
+        width: 80%;
+        margin: auto;
+       
+    }
+    #second_part{
+        width: 100%;
+        display: block;
+    }
+    #payment_first {
+        width: 80%;
+    
+    }
+    #payment_second {
+        width: 80%;
+       margin-top: 50px;
+    }
+  
+    
+}
