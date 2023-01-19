@@ -79,3 +79,47 @@ input[type="checkbox"]{
     /* padding: 4px; */
    
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+  #state{
+    width: 99%;
+   height:40px;
+  }
+  .prefrences{
+    margin: 10px;
+  }
+  .gender{
+    margin: 20px;
+  }
+  input[type="checkbox"]{
+    height: 15px;
+    width: 17px;
+}
+.can-button{
+    background-color:white;
+    border: 1px solid black;
+    padding: 10px 15px 10px 15px;
+    color: rgb(37, 36, 36);
+    font-weight: bolder;
+}
+.can-button:hover{
+    background-color: rgb(4, 4, 4);
+    color: white;
+}
+#submit{
+    padding: 10px;
+    color: rgb(22, 21, 21);
+    font-weight: bolder;
+
+}
+#submit:hover{
+    background-color: rgb(4, 4, 4);
+    color: white;
+}
+
