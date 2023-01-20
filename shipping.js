@@ -1,5 +1,8 @@
 let shippingData = JSON.parse(localStorage.getItem("shipping-Add")) || []
 let billingData = JSON.parse(localStorage.getItem("billing-Add")) || []
+let productData = JSON.parse(localStorage.getItem("product_cart")) || []
+let totalFinal = document.querySelector("#total_final")
+let totalFinal1 = document.querySelector("#total_final1")
 
 let form = document.getElementById("form")
 form.addEventListener("submit", submitShipAdd)
@@ -43,59 +46,39 @@ function submitBillingAdd(e) {
 }
 
 
-let totalPrice = document.querySelector("#second_div_shiiping")
+let totalPrice = document.querySelector("#second_div_shiiping1")
 
-function renderCard(qty, price) {
-    let cardList =
-        ` <div class="total-price">
-        <table id="second_table">
-            <tr>
-                <td>Product Subtotal</td>
-                <td>$ ${qty * price}</td>
-            </tr>
-            <tr id="shipping-free-row">
-                <td>Shipping</td>
-                <td>FREE</td>
-            </tr>
-            <tr>
-                <td><h4>Total</h4></td>
-                <td><h4>$ ${qty * price}</h4></td>
-            </tr>
-    
-        </table>
-    </div>
-        <div id="first_table_div">
-        <table id="first_table">
-            <tr>
-                <td >
-                    <div class="cart-info">
-                        <img src=" https://assets.basspro.com/image/upload/b_rgb:FFFFFF,c_limit,dpr_1.0,f_auto,h_1262,q_auto,w_2600/c_limit,h_1262,w_2600/v1/ProductImages/100/master1_100273329_main?pgw=1"
-                            alt="">
-                            <div class="cart-details">
-                                <p>Bass Pro Shops Johnny
-                                    Morris Carbonlite 2.0
-                                    Spinning Reel - Model
-                                    JCT1000</p>
-                            </div>
-                    </div>
-                </td>
-               
-                <td><input type="number" value="${qty}"></td>
-                <td>$${qty * price}</td>
-               
-            </tr>
-        </table>  
+     
+    renderCard(productData);
+
+    function renderCard(productData) {
+        totalPrice.innerHTML =  productData.map(element => {
+            return `
+            <table id="first_table">
+                <tr>
+                    <td style="width: 800px;">
+                        <div class="cart-info">
+                            <img src=${element.image}
+                                alt="">
+                                <div class="cart-details">
+                                    <p>${element.name}</p>
+                                    
+                                </div>
+                        </div>
+                    </td>
         
-       </div>
-       <div id="edit_cart_div" >
-        <button id="edit_cart_btn"><b>EDIT SHOPPING CART <b></button>
-        </div>
-    `
-
-    totalPrice.innerHTML = cardList
-
-}
-renderCard(1, 300)
+                    <td><p id="qty">1</p></td>
+                    <td id="ordvalue"> ${element.price}</td>    
+                </tr>
+            </table>
+           
+        `
+        });
+    
+            
+       
+       
+    }
 
 
 
