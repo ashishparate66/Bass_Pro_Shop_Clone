@@ -1,5 +1,7 @@
 
-// let cartData = JSON.parse(localStorage.getItem("done")) || []
+ let productData = JSON.parse(localStorage.getItem("product_cart")) || []
+ let totalFinal = document.querySelector("#total_final")
+ let totalFinal1 = document.querySelector("#total_final1")
 
 let checkout = document.getElementById("checkout")
 checkout.addEventListener("click", checkoutPage)
@@ -7,65 +9,117 @@ let checkout1 = document.getElementById("checkout1")
 checkout1.addEventListener("click", checkoutPage)
 function checkoutPage() {
     window.location.href = "shipping.html"
+   
 }
 
 let container = document.querySelector(".cart-page")
 let tbody = document.querySelector("table")
+renderCard(productData);
 
-function renderCard(qty, price) {
-    let cardList =
-        `
+function renderCard(productData) {
+    container.innerHTML =  productData.map(element => {
+      
+        return `
         <table id="first_table">
             <tr>
                 <th>Product</th>
                 <th>Availability</th>
                 <th>Quantity</th>
-                <th>Price</th>
-                <th>Subtotal</th>
+                <th>Price</th>    
             </tr>
 
             <tr>
                 <td style="width: 800px;">
                     <div class="cart-info">
-                        <img src=" https://assets.basspro.com/image/upload/b_rgb:FFFFFF,c_limit,dpr_1.0,f_auto,h_1262,q_auto,w_2600/c_limit,h_1262,w_2600/v1/ProductImages/100/master1_100273329_main?pgw=1"
+                        <img src=${element.image}
                             alt="">
                             <div class="cart-details">
-                                <p>Bass Pro Shops Johnny
-                                    Morris Carbonlite 2.0
-                                    Spinning Reel - Model
-                                    JCT1000</p>
-                                <a href="">Remove</a>
+                                <p>${element.name}</p>
+                                <a href="" id="removeBtn">Remove</a>
                             </div>
                     </div>
                 </td>
-
                 <td>Ship to Address</td>
-                <td><input type="number" value="${qty}"></td>
-                <td>$ ${price}</td>
-                <td>$ ${qty * price}</td>
+                <td><button id="sub">-</button><p id="qty">1</p> <button id="add">+</button></td>
+                <td id="ordvalue"> ${element.price}</td>    
             </tr>
         </table>
-        <div class="total-price">
-        <table id="second_table">
-            <tr>
-                <td>Product Subtotal</td>
-                <td>$ ${qty * price}</td>
-            </tr>
-            <tr id="shipping-free-row">
-                <td>Shipping</td>
-                <td>FREE</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$ ${qty * price}</td>
-            </tr>
-
-        </table>
-    </div>
+        
     `
+    });
 
-    container.innerHTML = cardList
+        
+   
+    let ordvalue = document.querySelectorAll("#ordvalue")
+    let removeBtn = document.querySelectorAll("#removeBtn")
+    let qty = document.querySelectorAll("#qty");
+    let add = document.querySelectorAll("#add");
+    let sub = document.querySelectorAll("#sub");
+  
+    let tot = 0
+    let orderData = []
+    productData.forEach((user, index) => {
+    tot += user.price
+    totalFinal.innerHTML= tot.toFixed(2);
+    totalFinal1.innerHTML= tot.toFixed(2);
+        removeBtn[index].addEventListener("click", () => {
+            productData.splice(index, 1)
+            renderCard(productData)
+            let newData = productData
+            localStorage.setItem("product_cart", JSON.stringify(newData))
 
+        });
+
+        add[index].addEventListener("click", () => {
+            let quantity = qty[index].innerText;
+            quantity++;
+            let t = user.price;
+            tot += user.price
+            qty[index].innerText = quantity;
+            ordvalue[index].innerText=""
+            let t1 = t*quantity
+            ordvalue[index].innerText = t1.toFixed(2);
+            totalFinal.innerHTML= tot.toFixed(2);
+            totalFinal1.innerHTML= tot.toFixed(2); 
+           
+        })
+
+        sub[index].addEventListener("click", () => {
+            let quantity = qty[index].innerText;
+            if(quantity > 1){
+                quantity--;
+            let t = user.price
+            tot = tot - user.price;
+            qty[index].innerText = quantity;
+            ordvalue[index].innerText=""
+            let t1 = t*quantity
+            ordvalue[index].innerText = t1.toFixed(2);;
+            totalFinal.innerHTML= tot.toFixed(2);t
+            totalFinal1.innerHTML= tot.toFixed(2); 
+          
+            }
+        })
+       
+       
+    })
+   
+   
 }
-renderCard(1, 300)
 
+
+
+
+
+
+   
+//     qty[i].addEventListener("change",function (event){
+      
+//         let tot = qty[i].value * event.target.offsetParent.offsetParent.children[0].children[1].children[3].innerText;
+
+//         event.target.offsetParent.offsetParent.children[0].children[1].children[4].innerText = tot;
+
+//           total = total + qty[i].value * event.target.offsetParent.offsetParent.children[0].children[1].children[3].innerText
+//          t = total
+//          console.log(total)
+         
+ 
