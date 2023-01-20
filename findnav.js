@@ -2,7 +2,8 @@ let container = document.getElementById("grid-1")
 let result = document.getElementById("results")
 let sPrice = document.getElementById("sPrice")
 
-
+let two = document.getElementById("two")
+let three = document.getElementById("three")
 
 async function fetchData() {
 
@@ -30,8 +31,10 @@ function arrangeData(data) {
 
         newData.push(obj)
     });
-
-    useData(newData)
+    result.innerHTML = ""
+    result.innerHTML = `${newData.length} Search Results`
+    useData(newData.slice(0, 12))
+    btnData(newData)
 
     b1.addEventListener("change", () => {
         if (b1.checked == true) {
@@ -176,6 +179,10 @@ function arrangeData(data) {
             p1.checked = false
             p2.checked = false
             p3.checked = false
+
+            two.classList.remove("show")
+            three.classList.remove("show")
+
             let card = document.querySelectorAll("#smallblock")
             fakeData.forEach((item, index) => {
                 card[index].addEventListener("click", () => {
@@ -197,6 +204,8 @@ function arrangeData(data) {
             })
         }
         else if (sale.checked == false) {
+            two.classList.add("show")
+            three.classList.add("show")
             useData(newData)
         }
     })
@@ -221,16 +230,13 @@ function useData(data) {
             useData(data)
         }
     })
-    let count = 0
     let finalData = []
     container.innerHTML = null
     data.forEach((item, index) => {
 
         finalData.push(constCard(item.image, item.name, item.price, item.rating))
-        count++
     })
-    result.innerText = ""
-    result.innerText = `${count} Search Results`
+
     container.innerHTML = finalData.join("")
     let card = document.querySelectorAll("#smallblock")
     data.forEach((item, index) => {
@@ -251,6 +257,23 @@ function useData(data) {
             window.location.assign("uniproduct.html")
         })
     })
+}
+
+
+function btnData(data) {
+    one.addEventListener("click", () => {
+        let newdata = data.slice(0, 12)
+        useData(newdata)
+    })
+    two.addEventListener("click", () => {
+        let newdata = data.slice(12, 24)
+        useData(newdata)
+    })
+    three.addEventListener("click", () => {
+        let newdata = data.slice(24, data.length)
+        useData(newdata)
+    })
+
 }
 
 function constCard(image, name, price, rating) {
