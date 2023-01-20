@@ -1,0 +1,1 @@
+var ChatConfig={};ChatConfig.MFERegistryService={cloud8BaseUrl:"",cloud8RegistryPath:"/platform-mfe-registry/public/v1/builds",params:{tenant:"",platform:"",cluster:"",site:"",deliveryRealm:""}};ChatConfig.packageVersion="packageVersion";ChatConfig.chaletConfig={cloud8BaseUrl:"",queueId:"",tenantId:"",channelName:""};

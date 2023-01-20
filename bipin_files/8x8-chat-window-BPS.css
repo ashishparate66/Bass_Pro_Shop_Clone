@@ -1,0 +1,99 @@
+:root {
+    --primaryGreen: #213629;
+    --neutralGray: #F6F4F1;
+}
+
+.inner-container {
+    padding: 0;
+}
+
+.header {
+    background-color: var(--primaryGreen);
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+.header .title {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.main, .footer {
+    background-color: var(--neutralGray);
+}
+
+img.logo.js-logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.controls {
+    position: relative;
+    z-index: 1;
+}
+a.control.close.js-control.js-close, a.control.end.js-border.js-control.js-close {
+    color: #fff !important;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+input[type="text"]#q-21, input[type="text"]#q-22 {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+label#label-q-21Id, label#label-q-22Id {
+    line-height: 2 !important;
+}
+
+button.submit.js-button_label.js-window_background.js-text.js-border.js-submit_button {
+    color: #fff !important;
+    background-color: var(--primaryGreen) !important;
+    border-radius: 0px !important;
+    padding: .5em .75em !important;
+    font-size: .9em !important;
+    font-family: 'Open sans', sans-serif !important;
+    box-shadow: none;
+    border: 1px solid var(--primaryGreen);
+    text-transform: uppercase;
+    transition: .5s ease-in-out
+}
+
+
+button.submit.js-button_label.js-window_background.js-text.js-border.js-submit_button:hover {
+    color: var(--primaryGreen) !important;
+    background-color: #fff !important;
+}
+
+
+
+/* ====we will be with you shortly=== */
+
+.message-wrapper {
+    background-color: var(--neutralGray) !important;
+}
+
+
+.message-box {
+    padding: .5rem .5rem 0 .5rem
+
+}
+
+#message-counter {
+    display: none !important;
+}
+
+
+
+.message-actions .flag {
+    background: url(https://assets.basspro.com/image/upload/v1663872943/DigitalCreative/2022/Site-Elements/Icons/yellow-ribbon.png) no-repeat top center !important;
+    width: 25px !important;
+    height: 32px !important;
+
+}

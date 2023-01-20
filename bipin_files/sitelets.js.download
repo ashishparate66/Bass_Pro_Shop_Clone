@@ -1,0 +1,42 @@
+//Do not edit this code
+if(typeof define === "function") {
+    // Bass Pro
+    define.amd.jQuery = true;
+    dojo.addOnLoad(function() {
+        require(["https://assetshare.basspro.com/content/dam/bps-general-assets/web/templates/sitelets/slick/slick.min.js","dojo/query"], function(slick,$){
+            $("output").style("visibility", "visible");
+            jQuery("#output").css("visibility", "hidden");
+            
+            jQuery('.product-carousel').slick(sliderOptions);
+        
+        });
+        $(".vid-thumb").click(function(vidEvent) {
+    		$("div.video-pop,div#tv-back").fadeIn();
+    		vidEvent.preventDefault();
+    	});
+    	$(".close-pop,div#tv-back").click(function(closeEvent) {
+    		$("div.video-pop,div#tv-back").fadeOut();
+    		$("iframe#sitelet-tv").attr("src","");
+    		$(".togetherSite section:nth-of-type(2)").slideUp();
+    		closeEvent.preventDefault();
+    	});
+    	$('.play1').click(function() {
+    		$("iframe#sitelet-tv").attr("src","#?rel=0&autoplay=1");
+    	});
+    	$(".scroll").click(function(event){       
+    		event.preventDefault();
+    		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+    	});
+    });
+} else {
+    // Cabelas
+    $('<script />', { type : 'text/javascript', src : 'https://assetshare.basspro.com/content/dam/bps-general-assets/web/templates/sitelets/slick/slick.min.js'}).insertBefore('.togetherSite');
+    
+    $('.product-carousel').slick(sliderOptions);
+}
+
+//dojo.addOnLoad(function() {
+//if (MonetateJS) {
+//MonetateJS.setPageType('sitelet');
+//}
+//});

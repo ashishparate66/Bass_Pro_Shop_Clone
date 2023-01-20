@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon/24px/action/military-member-badge</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/24px/action/military-member-badge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="frame" points="0 0 24 0 24 24 0 24"></polygon>
+        <path d="M12,2 C9,2 6,2.66666667 3,4 L3,10 C3,15.55 6.84,20.74 12,22 C17.16,20.74 21,15.55 21,10 L21,4 C18,2.66666667 15,2 12,2 Z M15.58,16 L12,13.7 L8.42,16 L9.5,11.88 L6.21,9.19 L10.45,8.94 L12,5 L13.54,8.95 L17.78,9.2 L14.49,11.89 L15.58,16 Z" id="shape" fill="#1E1D19"></path>
+    </g>
+</svg>
