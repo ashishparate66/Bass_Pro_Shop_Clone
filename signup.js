@@ -61,7 +61,7 @@ const postData = async (newUser) => {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(newUser),
     });
-    window.location.href = "/login.html";
+    window.location.href = "./index.html";
     return result;
   } catch (err) {
     alert("Prolem occured in data fetching");
