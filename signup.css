@@ -8,51 +8,42 @@
 }
 .Email_input_box>input{
     width: 98%;
-    height: 30px;
+    height: 50px;
     /* padding: 50 px; */
    
 }
 .password_input_box>input{
     width: 98%;
-    height: 30px;   
-}
+    height: 50px;}
 .country_input_box>select{
     width: 98%;
-    height: 30px;   
-}
+    height: 50px;}
 .Fname_input_box>input{
     width: 98%;
-    height: 30px; 
-}
+    height: 50px;}
 .Lname_input_box>input{
     width: 98%;
-    height: 30px; 
-    
+    height: 50px;    
 }
 .street_inputbox>input{
     width: 98%;
-    height: 30px; 
-
+    height: 50px;
 }
 .city_input_box>input{
     width: 98%;
-    height: 30px; 
-    
+    height: 50px;    
 }
 .state_input_box>input{
     width: 98%;
-    height: 30px; 
-    
+    height: 50px;    
 }
 .zip_input_box>input{
     width:30%;
-    height: 30px;
-    
+    height: 50px;    
 }
 .phone_input_box>input{
     width:30%;
-    height: 30px;
-    
+    height: 50px;    
 }
 .checkbox_container{
     display: flex;
@@ -121,5 +112,16 @@ input[type=number] {
 #submit:hover{
     background-color: rgb(4, 4, 4);
     color: white;
+}
+#form{
+    font-family: Bebas Neue,Arial,Charcoal,sans-serif;
+}
+#birthdate{
+    width:30%;
+    height: 50px;
+    font-size: 20px;
+}
+.sign_up_formcontainer{
+    padding: 70px;
 }
 

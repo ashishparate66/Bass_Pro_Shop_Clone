@@ -1,0 +1,287 @@
+/* =======================trying nav bar css========================= */
+
+#topnavbar {
+
+    color: white;
+    width: 100%;
+    height: 40px;
+    
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    }
+    
+    
+    span{
+        display: flex;
+       
+    }
+    #secondnavbar{
+       width: 100%;
+       margin: auto;
+       background-color: white;
+       color: white;
+       position: sticky;
+       top: 0px;
+      height: 30px;
+      display: flex;
+      align-items: center; 
+      justify-content:space-between;
+      
+      
+    }
+    #hr1{
+      position: sticky;
+       top: 30px;
+    }
+    #secondleft{
+      
+       width: 30%;
+        display: flex;
+        justify-content:space-between;
+        align-items: center; 
+    
+    }
+    #secondright{
+        
+        width: 55%;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        
+    
+    }
+    #secondright img{
+         width: 8%;
+        height: 30px;
+      
+       
+    }
+    a{
+         text-decoration: none;
+         color: black;
+    
+      }
+    
+      #thirdnavbar{
+        display: flex;
+        position: sticky;
+        top: 30px;
+        justify-content: space-between;
+        height: 80px;
+        background-color: white;
+      }
+      #thirdleft{
+       
+        width: 7%;
+        padding-left: 40px;
+    
+      
+      }
+      #thirdleft img{
+        width: 100%;
+      }
+    
+      #thirdmid{
+        border: 3px solid black;
+        width: 50%;
+      margin-top: 8px;
+        display: flex;
+        align-items: center;
+       padding: 16px;
+       border-radius: 40px;
+       height:15px
+    }
+    #thirdmid i{
+      
+      font-size: larger;
+      padding-left: 70px;
+    }
+    
+    #thirdmid input{
+        background: transparent;
+        border: 0px;
+        outline:0px;
+        width:80%
+    }
+    
+    
+      #thirdright{
+        
+        width:12%;
+        display: flex;
+         align-items: center;
+         padding-left: 20px;
+    
+      }
+      #thirdright img{
+        width: 50%;
+       padding-right: 20px;
+      }
+    
+    
+    #fourthnavbar{
+    background-color: white;
+    width:100%;
+     margin:auto;
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 25px;
+     font-size: large;
+     position: sticky;
+       top: 110px;
+    }
+
+    /* ===============================footer section css =============================== */
+
+
+    #ten {
+        display: flex;
+    
+        height: 300px;
+        align-items: center;
+    
+      }
+    
+      #t1 {
+    
+        width: 25%;
+        height: 200px;
+    
+      }
+    
+      #t2 {
+    
+        width: 25%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    
+      }
+    
+      #t3 {
+    
+        width: 25%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+      }
+    
+      #t4 {
+    
+        width: 25%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+      }
+    
+      #ele {
+    
+        padding-top: 40px;
+        width: 80%;
+        padding-left: 50px;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+    
+      }
+    
+      #ele img {
+        width: 30px;
+      }
+    
+      #e2 {
+    
+        display: flex;
+      }
+    
+      #e3 {
+    
+        display: flex;
+      }
+    
+      #e4 {
+    
+        display: flex;
+      }
+    
+      #e5 {
+    
+        display: flex;
+      }
+    
+      #twelve {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+      }
+    
+      #t14 img {
+        width: 20px;
+        height: 30px;
+        padding-left: 20px;
+      }
+    
+      #t141 {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+      }
+    
+      #t142 {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+      }
+    
+      #t143 {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+      }
+    
+      #thirt {
+    
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      #tr {
+    
+        display: flex;
+        width: 400px;
+        justify-content: space-around;
+        padding-right: 80px;
+        font-weight: 300;
+      }
+    
+      #tf {
+        display: flex;
+    
+        justify-content: space-around;
+        width: 500px;
+      }
+    
+      #tf img {
+        width: 40px;
+    
+      }
+    
+      #lfooter {
+        display: flex;
+        justify-content: space-around;
+      }
+    
+      #lfooter1 {
+        display: flex;
+        padding-left: 15px;
+        width: 40%;
+        justify-content: space-around;
+      }
+    
+      #lll {
+        padding-left: 20px;
+      }
