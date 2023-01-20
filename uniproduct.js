@@ -24,8 +24,23 @@ function arrangeData(item) {
 
   let button = document.getElementById("btn")
   button.addEventListener("click", () => {
-    arr.push(item[0])
-    localStorage.setItem("product_cart", JSON.stringify(arr))
+    let flag = true
+    if (arr.length != 0) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].name == item[0].name) {
+          flag = false
+          break
+        }
+      }
+    }
+    if (flag == false) {
+      alert("Already in the cart")
+    }
+    else if (flag) {
+      arr.push(item[0])
+      localStorage.setItem("product_cart", JSON.stringify(arr))
+      alert("Item successfully added to the cart")
+    }
   })
 }
 
