@@ -1,52 +1,52 @@
 /* Heading */
 *{
-    padding: 0;
-    margin:0;
-    font-family: serif;
+  padding: 0;
+  margin:0;
+  font-family: serif;
 } 
 
 #heading-box{
-    height: 100px;
-    width:80%;
-    margin: auto;
-    /* border:1px solid red; */
-    margin-top: 10px;
-    display: flex;
-    background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231));
-    color: rgb(111, 8, 8);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 100px;
+  width:90%;
+  margin: auto;
+  /* border:1px solid red; */
+  margin-top: 10px;
+  display: flex;
+  background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231));
+  color: rgb(111, 8, 8);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 #head-img{
-    align-items: row;
-    justify-content: center;
-    width: 45%;
-    margin-right: 10px;
-    /* border:1px solid red; */
-    
+  align-items: row;
+  justify-content: center;
+  width: 45%;
+  margin-right: 10px;
+  border:1px solid grey;
+  
 }
-#head-img > img{
-    width:22%;
-    height: 100%;
-    margin-left: 20%;
-    cursor: pointer;
-    border:1px solid #E2B0FF; 
-    border-radius: 10px;
+#head-img > a > img{
+  width:22%;
+  height: 90%;
+  margin-left: 20%;
+  margin-top: 5px;
+  cursor: pointer;
+  border:1px solid #E2B0FF; 
+  border-radius: 10px;
 }
 #heading{
-    width: 60%;
-    padding-left: 100px ;
-    text-align: left;
-    margin: auto;
-    font-size: 45px;
-    cursor: pointer;
+  width: 60%;
+  padding-left: 100px ;
+  text-align: left;
+  margin: auto;
+  font-size: 45px;
+  cursor: pointer;
 }
 
   /* Main Container */
   #mainContainer{
-
     margin: auto;
     margin-top: 20px;
-    width: 80%;
+    width: 90%;
     height:auto;
     display: flex;
     justify-content: space-between;
@@ -84,11 +84,22 @@
     margin-bottom: 50px;
     padding: 6px;
 }
+.wel_1{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231));
+  border-radius: 8px;
+  color: rgb(111, 8, 8);
+  margin-top: 50px;
+  padding: 6px;
+}
 /* Login Button & Login Details */
 .login{
     height: 50px;
     display: flex;
     justify-content: center;
+    
 }
 
 /* login button */
@@ -109,16 +120,15 @@
   background-color: #f39;
   color: aliceblue;
 }
-
 .form{
-  padding-top: 40px;
-  border: 1px solid black;
-  width: 99%;
-  height: 300px;
-  margin: auto;
-  /* margin-top: 40px; */
-  background-color: ghostwhite;
-  border-radius: 18px;
+padding-top: 40px;
+border: 1px solid black;
+width: 99%;
+height: 300px;
+margin: auto;
+/* margin-top: 40px; */
+background-color: ghostwhite;
+border-radius: 18px;
 }
 
 #username , #password{
@@ -131,7 +141,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #username, #password:placeholder-shown{
-    padding-left: 10px;
+  padding-left: 10px;
 }
 #lab{
   font-family:'Times New Roman', Times, serif;
@@ -141,12 +151,11 @@
 }
 
 #submit_btn{
-    font-size: 25px;
-    margin-left: 20px;
-    width: 40%;
-    height: 40px;
-    text-align: center;
-  
+  font-size: 25px;
+  margin-left: 20px;
+  width: 40%;
+  height: 40px;
+  text-align: center;
 }
 #submit_btn:hover{
   cursor: pointer;
@@ -167,6 +176,7 @@
   padding-top: 10px;
 }
 
+/* categories */
 #fishing,#shooting,#boating{
   font-size: 25px;
   height: 70px;
@@ -179,6 +189,61 @@
   color: rgb(26, 3, 3);
 }
 
+/* Fishing category button */
+#ft_btn_fish,#ad_btn_fish,#de_btn_fish,#up_btn_fish{
+  font-size: 25px;
+  height: 70px;
+  width: 80%;
+  margin-top: 30px;
+  margin: auto;
+  border: none;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  color: rgb(26, 3, 3);
+}
+#ft_btn_fish:hover,#ad_btn_fish:hover,#de_btn_fish:hover,#up_btn_fish:hover{
+  cursor: pointer !important;
+  background-color: #f39;
+  color: rgba(23, 16, 16, 0.683);
+}
+
+/* boating category button */
+#ft_btn_boat,#ad_btn_boat,#de_btn_boat,#up_btn_boat{
+  font-size: 25px;
+  height: 70px;
+  width: 80%;
+  margin-top: 30px;
+  margin: auto;
+  border: none;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  color: rgb(26, 3, 3);
+}
+#ft_btn_boat:hover,#ad_btn_boat:hover,#de_btn_boat:hover,#up_btn_boat:hover{
+  cursor: pointer !important;
+  background-color: #f39;
+  color: rgba(23, 16, 16, 0.683);
+}
+
+/* Shooting category button */
+#ft_btn_shoot,#ad_btn_shoot,#de_btn_shoot,#up_btn_shoot{
+  font-size: 25px;
+  height: 70px;
+  width: 80%;
+  margin-top: 30px;
+  margin: auto;
+  border: none;
+  border: 1px solid gainsboro;
+  border-radius: 8px;
+  color: rgb(26, 3, 3);
+}
+#ft_btn_shoot:hover,#ad_btn_shoot:hover,#de_btn_shoot:hover,#up_btn_shoot:hover{
+  cursor: pointer !important;
+  background-color: #f39;
+  color: rgba(23, 16, 16, 0.683);
+}
+
+/* admin dashboard button */
 #pr_btn,#ad_btn{
   font-size: 25px;
   height: 70px;
@@ -289,7 +354,7 @@
   /* border: 1px solid green; */
   margin: auto;
   margin-top: 5px;
- 
+
 }
 
 .SmallCards{
@@ -311,9 +376,9 @@
 
 #Back{
   width: 10%;
-  height: 60%;
+  height: 40px;
   padding-top: 1px;
-  margin-top: -19px;
+  margin-top: -10px;
   display: block;
   justify-content: center;
   border: none;
@@ -324,7 +389,7 @@
 }
 
 #Back:hover{
-  cursor: pointer;
+cursor: pointer;
 }
 
 #FormInput{
@@ -390,7 +455,7 @@ input[type="submit"]:hover{
   /* border: 1px solid green; */
   margin: auto;
   margin-top: 70px;
- 
+
 }
 
 .displayCard{
@@ -426,7 +491,7 @@ table{
   border-left: 1px solid rgb(143, 143, 163);
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-}
+  }
 .navRow>.details:nth-child(2){
   width:20%
 }
@@ -444,7 +509,6 @@ table{
   border-bottom: 1px solid #000;
 }
 #cat{
-  border-top: 1px solid #e66077;
   text-align: center;
   padding-top: 19px;
   border-bottom: 1px solid #e66077;

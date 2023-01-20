@@ -11,7 +11,7 @@ window.addEventListener("load",()=>{
         `;
         setTimeout(()=>{
             loginDetails();
-        },500);
+        },0);
     });
 });
 
@@ -184,10 +184,10 @@ function fishing_pro1() {
             </div>
       `;
     recent_categories();
-    fetch_button_fish();
-    add_button_fish();
-    deleteProduct_fish();
-    update_Product_fish();
+    ft_btn_fish();
+    // add_button_fish();
+    // deleteProduct_fish();
+    // update_Product_fish();
 }
 
 function boating_pro() {
@@ -226,10 +226,10 @@ function boating_pro1() {
             </div>
       `;
     recent_categories();
-    fetch_button_boat();
-    add_button_boat();
-    deleteProduct_boat();
-    update_Product_boat();
+    ft_btn_boat();
+    // add_button_boat();
+    // deleteProduct_boat();
+    // update_Product_boat();
 }
 
 function shooting_pro() {
@@ -268,10 +268,10 @@ function shooting_pro1() {
             </div>
       `;
     recent_categories();
-    fetch_button_shoot();
-    add_button_shoot();
-    deleteProduct_shoot();
-    update_Product_shoot();
+    // ft_btn_shoot();
+    // add_button_shoot();
+    // deleteProduct_shoot();
+    // update_Product_shoot();
 }
 
 function recent_categories() {
@@ -289,37 +289,126 @@ function recent_categories() {
   
 //  Fetch && Pagination
   
-function fetch_button_fish() {
-    let fetch_btn_fish = document.querySelector("#ft_btn_fish");
-  
-    fetch_btn_fish.addEventListener("click", (e) => {
+function ft_btn_fish() {
+    let ft_btn_fish = document.querySelector("#ft_btn_fish");
+
+    ft_btn_fish.addEventListener("click", (e) => {
       Rightbox.style.background = "white";
       Rightbox.innerHTML = "";
+
+    Rightbox.innerHTML = `
+    <div id="loading" style=" background-color:white; height:6100px;" >
+        <p>Please wait page is loading ...</p>
+    </div>
+  `;
+  
       FetchProduct_fish();
       Rightbox.style.background = "White";
-    });
+    });   
 }
-  
-let Rightbox = document.querySelector("#Right");
 
+Rightbox = document.getElementById("Right")
 
-function DisplayProduct(data) {
-    Rightdiv.innerHTML = "";
-    Rightdiv.innerHTML = `
+async function FetchProduct_fish(){
+    try {
+        let res = await fetch(
+            "https://6398195577359127a04715b0.mockapi.io/products", 
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+        if (res.ok == true) {
+            let data = await res.json();
+            DisplayProduct_fish(data);
+          }
+    } catch {
+        console.log("Failed to fetch Product");
+    }
+}
+
+function DisplayProduct_fish(data) {
+    Rightbox.innerHTML = "";
+    Rightbox.innerHTML = `
         <div id="Cards">
             ${data
                 .map((el) => {
                     return `<div Class="SmallCards">
-                            <img src="${el.image}" alt="Error">
-                            <p>${el.id}</p>
-                            <p>${el.category}</p>
-                            <p>${el.title}</p>
-                            <p>Rs. ${el.price}</p>
+                        <img src="${el.img}" alt="Error">
+                              <h5>${el.title}</h5>
+                              <h6>${el.brand}</h6>
+                              <p>${el.rating}</p>
+                              <p>${el.description.substring(0,50)}</p>
+                              <h5>Rs. ${el.price}</h5>
                             </div>`;
-                    }).join(" ")} 
+                    })
+                    .join(" ")} 
+          </div> `;
+}
+
+
+
+function ft_btn_boat() {
+  let ft_btn_boat = document.querySelector("#ft_btn_boat");
+
+  ft_btn_boat.addEventListener("click", (e) => {
+    Rightbox.style.background = "white";
+    Rightbox.innerHTML = "";
+
+  Rightbox.innerHTML = `
+  <div id="loading" style=" background-color:white; height:6100px;" >
+      <p>Please wait page is loading ...</p>
+  </div>
+`;
+
+    FetchProduct_boat();
+    Rightbox.style.background = "White";
+  });   
+}
+
+async function FetchProduct_boat(){
+  try {
+      let res = await fetch(
+          "https://6398195577359127a04715b0.mockapi.io/boating", 
+          {
+              method: "GET",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+          }
+      );
+      if (res.ok == true) {
+          let data = await res.json();
+          DisplayProduct_boat(data);
+        }
+  } catch {
+      console.log("Failed to fetch Product");
+  }
+}
+
+function DisplayProduct_boat(data) {
+  Rightbox.innerHTML = "";
+  Rightbox.innerHTML = `
+      <div id="Cards">
+          ${data
+              .map((el) => {
+                  return `<div Class="SmallCards">
+                    <img src="${el.img}" alt="Error">
+                    <h5>${el.title}</h5>
+                    <h6>${el.brand}</h6>
+                    <p>${el.rating}</p>
+                    <p>${el.description.substring(0,50)}</p>
+                    <h5>Rs. ${el.price}</h5>
+                          </div>`;
+                  })
+                  .join(" ")} 
         </div> `;
 }
-  
+
+//User Details
+
 function ClickFunction_1() {
     let userBtn = document.querySelector("#ur_btn");
   
@@ -332,23 +421,209 @@ function ClickFunction_1() {
   
       document.querySelector("#Right").innerHTML = "";
       document.querySelector("#Right").innerHTML = `
-            <div class="wel">
-              <h1> User DashBoard ! </h1>
-            </div>
+          <div class="wel">
+            <h1> User DashBoard ! </h1>
+          </div>
       `;
-    });
+  });
+}
+
+function InsideUserBtn() {
+  leftbox.innerHTML = `
+    <div id="Container_1">
+      <button id="Back"><</button>
+      <button id="regis_btn">Register User</button>
+      <button id="user_btn">Login User</button>
+  `;
+  recent();
+  UserRegister();
+  UserLogin();
+}
+
+function UserRegister() {
+  document.getElementById("regis_btn").addEventListener("click", () => {
+    Rightbox.style.background="linear-gradient(to left, rgb(120 139 109), rgb(231, 170, 231))"
+    document.querySelector("#Right").innerHTML = "";
+    document.querySelector("#Right").innerHTML = `
+      <div id="loading">
+        <p>Please wait page is loading ...</p>
+      </div>
+    `;
+    setTimeout(() => {
+      document.querySelector("#Right").innerHTML = "";
+      tableStructure();
+    }, 1000);
+  });
+}
+
+function tableStructure() {
+  document.querySelector("#Left").innerHTML = `
+  <div id="Container">
+      <button id="Back"><</button>
+  </div>
+  <div class="wel_1">
+      <h1>Register Details</h1>
+  </div>
+`;
+  document.querySelector("#Right").innerHTML = `
+  <h2 id="head_regDetails">Register User Details</h2>
+        <table>
+              <thead id="head">
+                    <tr class="navRow">
+                        <td class="details">Id</td>
+                        <td class="details">Username</td>
+                        <td class="details">Mobile</td>
+                        <td class="details">Email Id</td>
+                        <td class="details">Password</td>
+                    </tr>
+              </thead>
+              <tbody id="mainContainer_tb">
+                   
+              </tbody>
+          </table>
+  `;
+  recent_1();
+  Register();
+}
+
+function recent_1() {
+  let back_button = document.querySelector("#Back");
+  back_button.addEventListener("click", () => {
+    InsideUserBtn();
+    document.querySelector("#Right").innerHTML = "";
+    document.querySelector("#Right").innerHTML = `
+          <div class="wel">
+            <h1> Admin Dashboard ! </h1>
+          </div>
+    `;
+  });
+}
+
+async function Register() {
+  try {
+    let res = await fetch(
+      "https://voilent-market-api-vaibhav.onrender.com/users",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (res.ok) {
+      let data = await res.json();
+      tableStruc(data);
+    }
+  } catch (error) {
+    alert("Problem in Fetching");
   }
+}
 
+function tableStruc(data) {
+  tableStructu(data);
+}
 
+function tableStructu(data) {
+  document.querySelector("#mainContainer_tb").innerHTML = `
+        ${data
+          .map((el) => {
+            return `<tr class="navRow">
+                      <td class="details">${el.id}</td>
+                      <td class="details">${el.username}</td>
+                      <td class="details">${el.mobileNo}</td>
+                      <td class="details">${el.email}</td>
+                      <td class="details">${el.password}</td>
+                  </tr>`;
+          })
+          .join(" ")}
+  </tr>
+  `;
+}
 
+function UserLogin() {(251, 243, 244)
+  document.getElementById("user_btn").addEventListener("click", () => {
+    Rightbox.style.background="linear-gradient(to left, rgb(120 139 109), rgb(231, 170, 231))"
+    document.querySelector("#Right").innerHTML = "";
+    document.querySelector("#Right").innerHTML = `
+      <div id="loading">
+        <p>Please wait page is loading ...</p>
+     </div>
+    `;
+    setTimeout(() => {
+      document.querySelector("#Right").innerHTML = "";
+      tableStructure_lo();
+    }, 1000);
+  });
+}
 
+function tableStructure_lo() {
+  document.querySelector("#Left").innerHTML = `
+  <div id="Container">
+      <button id="Back"><</button>
+  </div>
+  <div class="wel_1">
+      <h1>Login Details</h1>
+  </div>
+`;
+  document.querySelector("#Right").innerHTML = `
+  <h2 id="head_regDetails">Login User Details</h2>
+        <table>
+              <thead id="head">
+                    <tr class="navRow">
+                        <td class="details_1">Id</td>
+                        <td class="details_1">Username</td>
+                        <td class="details_1">Password</td>
+                    </tr>
+              </thead>
+              <tbody id="mainContainer_tc">
+                   
+              </tbody>
+          </table>
+  `;
+  recent_1();
+  login_1();
+}
 
+async function login_1() {
+  try {
+    let res = await fetch(
+      "https://6398172cfe03352a94c47ae1.mockapi.io/login_user",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
+    if (res.ok) {
+      let data = await res.json();
+      tableStruc_1(data);
+    }
+  } catch (error) {
+    alert("Problem in Fetching");
+  }
+}
 
+function tableStruc_1(data) {
+  tableStructu_1(data);
+}
 
-
-
-
+function tableStructu_1(data) {
+  document.querySelector("#mainContainer_tc").innerHTML = `
+        ${data
+          .map((el) => {
+            return `<tr class="navRow">
+                      <td class="details_1">${el.id}</td>
+                      <td class="details_1">${el.Username}</td>
+                      <td class="details_1">${el.Password}</td>
+                  </tr>`;
+          })
+          .join(" ")}
+  </tr>
+  `;
+}
 
 
 
