@@ -1,7 +1,7 @@
 main {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 aside {
@@ -71,7 +71,7 @@ section > h4 {
   text-decoration: line-through;
 }
 .lflex {
-  width: 75%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -93,4 +93,32 @@ section > h4 {
 }
 #rate {
   margin: 10px 0px;
+}
+#button-block {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  margin: auto;
+}
+#button-block > button {
+  margin: 10px 10px;
+  padding: 5px 15px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#button-block > button:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }

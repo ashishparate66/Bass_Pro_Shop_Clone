@@ -1,9 +1,8 @@
 let container = document.getElementById("grid-1")
 let result = document.getElementById("results")
 let sPrice = document.getElementById("sPrice")
-
-
-
+let btn = document.getElementById("button-block")
+let two = document.getElementById("two")
 async function fetchData() {
 
     let data = await fetch("./product.json")
@@ -29,12 +28,10 @@ function arrangeData(data) {
 
         newData.push(obj)
     });
-
-
-
-
-    useData(newData)
-
+    result.innerHTML = ""
+    result.innerHTML = `${newData.length} Search Results`
+    useData(newData.slice(0, 12))
+    btnData(newData)
     b1.addEventListener("change", () => {
         if (b1.checked == true) {
             let fakeData = newData.filter((item) => item.brand == "13 Fishing")
@@ -136,6 +133,7 @@ function arrangeData(data) {
         }
         else if (b6.checked == false) {
             useData(newData)
+
         }
     })
     b7.addEventListener("change", () => {
@@ -250,8 +248,10 @@ function arrangeData(data) {
             p1.checked = false
             p2.checked = false
             p3.checked = false
+
+            two.classList.remove("show")
+
             let card = document.querySelectorAll("#smallblock")
-            console.log(card)
             fakeData.forEach((item, index) => {
                 card[index].addEventListener("click", () => {
                     let arr = []
@@ -276,6 +276,7 @@ function arrangeData(data) {
 
         }
         else if (sale.checked == false) {
+            two.classList.add("show")
             useData(newData)
         }
 
@@ -284,7 +285,6 @@ function arrangeData(data) {
 }
 
 function useData(data) {
-
     sPrice.addEventListener("change", () => {
         if (sPrice.value == "A-Z") {
             data.sort((a, b) => a.price - b.price)
@@ -298,16 +298,12 @@ function useData(data) {
             useData(data)
         }
     })
-    let count = 0
     let finalData = []
     container.innerHTML = null
     data.forEach((item, index) => {
 
         finalData.push(constCard(item.image, item.name, item.price, item.rating))
-        count++
     })
-    result.innerText = ""
-    result.innerText = `${count} Search Results`
     container.innerHTML = finalData.join("")
 
 
@@ -339,15 +335,32 @@ function useData(data) {
 }
 
 
+function btnData(data) {
+    one.addEventListener("click", () => {
+        let newdata = data.slice(0, 12)
+        useData(newdata)
+    })
+    two.addEventListener("click", () => {
+        let newdata = data.slice(12, data.length)
+        useData(newdata)
+    })
+
+}
+
+
 
 
 function constCard(image, name, price, rating) {
     let str = []
-    let arr = [`<i class="fa-solid fa-star">`, `<i class="fa-solid fa-star">`, `<i class="fa-solid fa-star">`, `<i class="fa-solid fa-star-half-stroke"></i>`]
+    let arr = [`<i class="fa-solid fa-star"></i>`,
+        `<i class="fa-solid fa-star"></i>`,
+        `<i class="fa-solid fa-star"></i>`,
+        `<i class="fa-solid fa-star"></i>`,
+        `<i class="fa-solid fa-star-half-stroke"></i>`]
     for (let i = 0; i < rating; i++) {
         str.push(arr[i])
     }
-
+    console.log(str)
     let card = `
     <div id="smallblock" >
     <img src=${image} alt="" />

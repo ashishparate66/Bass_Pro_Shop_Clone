@@ -1,7 +1,7 @@
 main {
-  width: 85%;
+  width: 90%;
   margin: auto;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 main img {
   width: 100%;
@@ -66,7 +66,7 @@ main h2 {
 .flex-1 {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   margin-top: 90px;
 }
 
