@@ -55,7 +55,7 @@
 /* Left Side  */
 #Left{
     /* border: 1px solid green;   */
-    width: 40%;
+    width: 30%;
     height:auto; 
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
    text-align: center;
@@ -87,6 +87,7 @@
 .wel_1{
   width: 80%;
   text-align: center;
+  height: auto;
   margin: auto;
   background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231));
   border-radius: 8px;
@@ -174,6 +175,24 @@ border-radius: 18px;
   grid-template-columns: repeat(1);
   grid-template-rows: repeat(1);
   padding-top: 10px;
+}
+
+#Container_user{
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(1);
+  grid-template-rows: repeat(1);
+  padding-top: 10px;
+}
+
+#Container_user h1{
+  width: 80%;
+  margin: auto;
+  background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231));
+  border-radius: 8px;
+  color: rgb(111, 8, 8);
+  margin-top: 50px;
+  padding: 6px;
 }
 
 /* categories */
@@ -479,9 +498,11 @@ input[type="submit"]:hover{
 /* User Details */
 
 table{
-  width: 100%;
+  width: 90%;
   /* border-top: 1px solid black; */
   /* border-right: 1px solid black; */
+  margin-bottom: 10px;
+  margin: auto;
 }
 .details,.details_1{
   border-right: 1px solid rgb(143, 143, 163);
@@ -507,6 +528,7 @@ table{
   border: none;
   border-right: 1px solid rgb(214, 202, 202);
   border-bottom: 1px solid #000;
+  margin-bottom: 10px;
 }
 #cat{
   text-align: center;
@@ -547,18 +569,4 @@ table{
   gap: 15px;
   margin-bottom: 20px;
   margin-top: 10px;
-}
-#pg_1,#pg_2,#pg_3,#pg_4,#pg_5{
-  padding: 5px;
-  width: 35px;
-  font-size: 20px;
-  color: black;
-  border-radius: 50px;
-  border: 1px solid gray;
-}
-
-#pg_1:hover,#pg_2:hover,#pg_3:hover,#pg_4:hover,#pg_5:hover{
-  cursor: pointer;
-  background-color:#f39;
-  border: none;
 }
