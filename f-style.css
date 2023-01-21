@@ -1,7 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 main {
   width: 90%;
   margin: auto;
-  /* border: 2px solid black; */
 }
 main img {
   width: 100%;
@@ -41,7 +44,6 @@ main h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  height: 230px;
   align-items: center;
   margin: auto;
 }
@@ -66,7 +68,6 @@ main h2 {
 .flex-1 {
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid black; */
   margin-top: 90px;
 }
 
@@ -142,4 +143,39 @@ main h2 {
 
 #smallblock:hover {
   transform: skew(5deg);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1080px) {
+  .flex-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #grid_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lflex {
+    width: 100%;
+    align-items: center;
+  }
+  .lflex > h6 {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .flex-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #grid_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lflex {
+    width: 100%;
+    align-items: center;
+  }
+  .lflex > h6 {
+    margin: 10px;
+  }
+  #content {
+    width: 100%;
+  }
 }
