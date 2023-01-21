@@ -157,7 +157,7 @@ background-color: #213629;
     
 }
 
-@media only screen and (max-width : 1000px){
+@media only screen and (max-width : 600px){
 
     #payment_main {
         display: block;
@@ -179,4 +179,26 @@ background-color: #213629;
     }
   
     
+}
+@media screen and (min-width:600px) and (max-width:1000px) {
+    #payment_main {
+        display: block;
+        width: 80%;
+        margin: auto;
+       
+    }
+    #second_part{
+        width: 100%;
+        display: block;
+    }
+    #payment_first {
+        width: 80%;
+    
+    }
+    #payment_second {
+        width: 80%;
+       margin-top: 50px;
+    }
+  
+
 }
