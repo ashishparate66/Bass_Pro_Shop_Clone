@@ -185,9 +185,9 @@ function fishing_pro1() {
       `;
     recent_categories();
     ft_btn_fish();
-    // add_button_fish();
-    // deleteProduct_fish();
-    // update_Product_fish();
+    add_button_fish();
+    deleteProduct_fish();
+    update_Product_fish();
 }
 
 function boating_pro() {
@@ -227,9 +227,9 @@ function boating_pro1() {
       `;
     recent_categories();
     ft_btn_boat();
-    // add_button_boat();
-    // deleteProduct_boat();
-    // update_Product_boat();
+    add_button_boat();
+    deleteProduct_boat();
+    update_Product_boat();
 }
 
 function shooting_pro() {
@@ -287,7 +287,7 @@ function recent_categories() {
     });
 }
   
-//  Fetch && Pagination
+//  Fetch Fishing Products
   
 function ft_btn_fish() {
     let ft_btn_fish = document.querySelector("#ft_btn_fish");
@@ -337,18 +337,269 @@ function DisplayProduct_fish(data) {
                 .map((el) => {
                     return `<div Class="SmallCards">
                         <img src="${el.img}" alt="Error">
-                              <h5>${el.title}</h5>
-                              <h6>${el.brand}</h6>
-                              <p>${el.rating}</p>
-                              <p>${el.description.substring(0,50)}</p>
-                              <h5>Rs. ${el.price}</h5>
+                              <h3>${el.title}</h3>
+                              <h4>${el.brand}</h4>
+                              <h3>Rs. ${el.price}</h3>
                             </div>`;
                     })
                     .join(" ")} 
           </div> `;
 }
 
+// Add fishing Product
 
+function add_button_fish() {
+  let add_btn_fish = document.querySelector("#ad_btn_fish");
+
+  add_btn_fish.addEventListener("click", (e) => {
+    Rightbox.innerHTML = "";
+
+    Rightbox.innerHTML = `
+         <div id="FormInput">
+            <h2 id="inputHeader">Product Form</h2>
+             <form>
+                
+                <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
+                
+                <br>
+                
+                <input type="url" id="img" required="Mandatory Field" placeholder="Enter Product Url" >
+                <br>
+                
+                <input type="text" id="brand" required="Mandatory Field" placeholder="Enter Product brand" >
+                <br>
+                
+                <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
+                <br>
+                <input type="number" id="price" required="Mandatory Field" placeholder="Enter Product Price" > 
+                
+                <br>
+                <input type="submit">
+             </form>
+         </div>
+         <div class="dataShow">
+         </div> 
+       `;
+    InputTag_fish();
+  });
+}
+var arr = [];
+
+function InputTag_fish() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let productInput = document.querySelectorAll("input");
+    let newProduct = {};
+    for (let i = 0; i < productInput.length - 1; i++) {
+      newProduct[productInput[i].id] = productInput[i].value;
+    }
+    AddPro_fish(newProduct);
+  });
+}
+
+async function AddPro_fish(data) {
+  try {
+    let product = await fetch(
+      "https://6398195577359127a04715b0.mockapi.io/products",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Added Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+        document.querySelector("#image").value = "";
+        document.querySelector("#brand").value = "";
+        document.querySelector("#title").value = "";
+        document.querySelector("#price").value = "";
+      }, 1000);
+
+      arr.push(finalProduct);
+      console.log(arr);
+      add_fish(arr);
+    } else {
+      alert("Product Not Added ! Please try again !");
+    }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
+}
+
+function add_fish(finalProduct) {
+  document.querySelector(".dataShow").innerHTML = `
+                     ${finalProduct
+                       .map((el) => {
+                         return `<div class="displayCard">
+                                  <img src="${el.image}" alt="Error">
+                                  <p>${el.id}</p>
+                                  <p>${el.brand}</p>
+                                  <p>${el.title}</p>
+                                  <p>Rs. ${el.price}</p>
+                               </div>`;
+                       })
+                       .join(" ")}
+         `;
+}
+
+// Delete fishing product
+
+function deleteProduct_fish() {
+  document.querySelector("#de_btn_fish").addEventListener("click", () => {
+    Rightbox.innerHTML = "";
+    Rightbox.innerHTML = `
+              <div id="DeleteInput">
+                  <form>
+                      <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
+                      <br>
+                      <input type="submit">
+                  </form>   
+              </div>
+          `;
+    InputTag_fish2();
+  });
+}
+
+function InputTag_fish2() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ids = document.querySelector("#id").value;
+    InputTag_fish2_1(ids);
+  });
+}
+
+async function InputTag_fish2_1(ids) {
+  try {
+    let product = await fetch(
+      `"https://6398195577359127a04715b0.mockapi.io/products"${ids}`,
+      {
+        method: "Delete",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Deleted Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+      }, 1000);
+    } else {
+      alert("Product Not Deleted ! Please try again !");
+    }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
+}
+
+// Update fishing Product
+
+function update_Product_fish() {
+  document.getElementById("up_btn_fish").addEventListener("click", () => {
+    Rightbox.innerHTML = "";
+
+    Rightbox.innerHTML = `
+         <div id="FormInput">
+            <h2 id="inputHeader">Product Form</h2>
+             <form>
+                
+                <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
+                
+                <br>
+                
+                <input type="url" id="img" required="Mandatory Field" placeholder="Enter Product Url" >
+                <br>
+                
+                <input type="text" id="brand" required="Mandatory Field" placeholder="Enter Product Category" >
+                <br>
+                
+                <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
+                <br>
+                <input type="number" id="price" required="Mandatory Field" placeholder="Enter Product Price" > 
+                
+                <br>
+                <input type="submit">
+             </form>
+         </div>
+         <div class="dataShow">
+         </div> 
+       `;
+    update_fish();
+  });
+}
+
+function update_fish() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let productInput = document.querySelectorAll("input");
+    let newProduct = {};
+    for (let i = 0; i < productInput.length - 1; i++) {
+      newProduct[productInput[i].id] = productInput[i].value;
+    }
+    InputTag_fish3(newProduct);
+  });
+}
+
+async function InputTag_fish3(data) {
+  var arr1 = [];
+  try {
+    let ids = document.querySelector("#id").value;
+    let product = await fetch(
+      `"https://6398195577359127a04715b0.mockapi.io/products"${ids}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Updated Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+        document.querySelector("#image").value = "";
+        document.querySelector("#brand").value = "";
+        document.querySelector("#title").value = "";
+        document.querySelector("#price").value = "";
+      }, 1000);
+      arr1.push(finalProduct);
+      addU_fish(arr1);
+    } else {
+      alert("Product Not Updated ! Please try again !");
+    }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
+}
+
+function addU_fish(finalProduct) {
+  document.querySelector(".dataShow").innerHTML = `
+                    ${finalProduct
+                      .map((el) => {
+                        return `<div class="displayCard">
+                                        <img src="${el.image}" alt="Error">
+                                        <p>${el.id}</p>
+                                        <p>${el.brand}</p>
+                                        <p>${el.title}</p>
+                                        <p>Rs. ${el.price}</p>
+                                </div>`;
+                      })
+                      .join(" ")}
+        `;
+}
+
+// Fetch boating products
 
 function ft_btn_boat() {
   let ft_btn_boat = document.querySelector("#ft_btn_boat");
@@ -392,19 +643,270 @@ function DisplayProduct_boat(data) {
   Rightbox.innerHTML = "";
   Rightbox.innerHTML = `
       <div id="Cards">
-          ${data
-              .map((el) => {
-                  return `<div Class="SmallCards">
-                    <img src="${el.img}" alt="Error">
-                    <h5>${el.title}</h5>
-                    <h6>${el.brand}</h6>
-                    <p>${el.rating}</p>
-                    <p>${el.description.substring(0,50)}</p>
-                    <h5>Rs. ${el.price}</h5>
-                          </div>`;
-                  })
-                  .join(" ")} 
-        </div> `;
+      ${data
+        .map((el) => {
+            return `<div Class="SmallCards">
+                <img src="${el.img}" alt="Error">
+                      <h3>${el.title}</h3>
+                      <h4>${el.brand}</h4>
+                      <h3>Rs. ${el.price}</h3>
+                    </div>`;
+            })
+            .join(" ")} 
+  </div> `;
+}
+
+// Add boating Product
+
+function add_button_boat() {
+  let add_btn_boat = document.querySelector("#ad_btn_boat");
+
+  add_btn_boat.addEventListener("click", (e) => {
+    Rightbox.innerHTML = "";
+
+    Rightbox.innerHTML = `
+         <div id="FormInput">
+            <h2 id="inputHeader">Product Form</h2>
+             <form>
+                
+                <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
+                
+                <br>
+                
+                <input type="url" id="image" required="Mandatory Field" placeholder="Enter Product Url" >
+                <br>
+                
+                <input type="text" id="category" required="Mandatory Field" placeholder="Enter Product Category" >
+                <br>
+                
+                <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
+                <br>
+                <input type="number" id="price" required="Mandatory Field" placeholder="Enter Product Price" > 
+                
+                <br>
+                <input type="submit">
+             </form>
+         </div>
+         <div class="dataShow">
+         </div> 
+       `;
+    InputTag_boat();
+  });
+}
+var arr = [];
+
+function InputTag_boat() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let productInput = document.querySelectorAll("input");
+    let newProduct = {};
+    for (let i = 0; i < productInput.length - 1; i++) {
+      newProduct[productInput[i].id] = productInput[i].value;
+    }
+    AddPro_boat(newProduct);
+  });
+}
+
+async function AddPro_boat(data) {
+  try {
+    let product = await fetch(
+      "https://6398195577359127a04715b0.mockapi.io/products",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Added Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+        document.querySelector("#image").value = "";
+        document.querySelector("#category").value = "";
+        document.querySelector("#title").value = "";
+        document.querySelector("#price").value = "";
+      }, 1000);
+
+      arr.push(finalProduct);
+      console.log(arr);
+      add_boat(arr);
+    } else {
+      alert("Product Not Added ! Please try again !");
+    }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
+}
+
+function add_boat(finalProduct) {
+  document.querySelector(".dataShow").innerHTML = `
+                     ${finalProduct
+                       .map((el) => {
+                         return `<div class="displayCard">
+                                  <img src="${el.image}" alt="Error">
+                                  <p>${el.id}</p>
+                                  <p>${el.brand}</p>
+                                  <p>${el.title}</p>
+                                  <p>Rs. ${el.price}</p>
+                               </div>`;
+                       })
+                       .join(" ")}
+         `;
+}
+
+// Delete boating product
+
+function deleteProduct_boat() {
+  document.querySelector("#de_btn_boat").addEventListener("click", () => {
+    Rightbox.innerHTML = "";
+    Rightbox.innerHTML = `
+              <div id="DeleteInput">
+                  <form>
+                      <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
+                      <br>
+                      <input type="submit">
+                  </form>   
+              </div>
+          `;
+    InputTag_fish2();
+  });
+}
+
+function InputTag_fish2() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ids = document.querySelector("#id").value;
+    InputTag_fish2_1(ids);
+  });
+}
+
+async function InputTag_boat2_1(ids) {
+  try {
+    let product = await fetch(
+      `"https://6398195577359127a04715b0.mockapi.io/boating"${ids}`,
+      {
+        method: "Delete",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Deleted Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+      }, 1000);
+    } else {
+      alert("Product Not Deleted ! Please try again !");
+    }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
+}
+
+// Update boatingProduct
+
+function update_Product_boat() {
+  document.getElementById("up_btn_boat").addEventListener("click", () => {
+    Rightbox.innerHTML = "";
+
+    Rightbox.innerHTML = `
+         <div id="FormInput">
+            <h2 id="inputHeader">Product Form</h2>
+             <form>
+                
+                <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
+                
+                <br>
+                
+                <input type="url" id="image" required="Mandatory Field" placeholder="Enter Product Url" >
+                <br>
+                
+                <input type="text" id="brand" required="Mandatory Field" placeholder="Enter Product Category" >
+                <br>
+                
+                <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
+                <br>
+                <input type="number" id="price" required="Mandatory Field" placeholder="Enter Product Price" > 
+                
+                <br>
+                <input type="submit">
+             </form>
+         </div>
+         <div class="dataShow">
+         </div> 
+       `;
+    update_boat();
+  });
+}
+
+function update_boat() {
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let productInput = document.querySelectorAll("input");
+    let newProduct = {};
+    for (let i = 0; i < productInput.length - 1; i++) {
+      newProduct[productInput[i].id] = productInput[i].value;
+    }
+    InputTag_boat3(newProduct);
+  });
+}
+
+async function InputTag_boat3(data) {
+  var arr1 = [];
+  try {
+    let ids = document.querySelector("#id").value;
+    let product = await fetch(
+      `"https://6398195577359127a04715b0.mockapi.io/boating"${ids}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }
+    );
+    if (product.ok) {
+      let finalProduct = await product.json();
+      alert("Product Updated Successfully");
+      setTimeout(() => {
+        document.querySelector("#id").value = "";
+        document.querySelector("#image").value = "";
+        document.querySelector("#brand").value = "";
+        document.querySelector("#title").value = "";
+        document.querySelector("#price").value = "";
+      }, 1000);
+      arr1.push(finalProduct);
+      addU_boat(arr1);
+    } else {
+      alert("Product Not Updated ! Please try again !");
+    }
+  } catch (error) {
+    console.log("Fetching product failed");
+  }
+}
+
+function addU_boat(finalProduct) {
+  document.querySelector(".dataShow").innerHTML = `
+                    ${finalProduct
+                      .map((el) => {
+                        return `<div class="displayCard">
+                                        <img src="${el.image}" alt="Error">
+                                        <p>${el.id}</p>
+                                        <p>${el.brand}</p>
+                                        <p>${el.title}</p>
+                                        <p>Rs. ${el.price}</p>
+                                </div>`;
+                      })
+                      .join(" ")}
+        `;
 }
 
 //User Details
@@ -458,10 +960,8 @@ function UserRegister() {
 
 function tableStructure() {
   document.querySelector("#Left").innerHTML = `
-  <div id="Container">
+  <div id="Container_user">
       <button id="Back"><</button>
-  </div>
-  <div class="wel_1">
       <h1>Register Details</h1>
   </div>
 `;
@@ -559,10 +1059,8 @@ function UserLogin() {(251, 243, 244)
 
 function tableStructure_lo() {
   document.querySelector("#Left").innerHTML = `
-  <div id="Container">
+  <div id="Container_user">
       <button id="Back"><</button>
-  </div>
-  <div class="wel_1">
       <h1>Login Details</h1>
   </div>
 `;
@@ -588,7 +1086,7 @@ function tableStructure_lo() {
 async function login_1() {
   try {
     let res = await fetch(
-      "https://6398172cfe03352a94c47ae1.mockapi.io/login_user",
+      "https://voilent-market-api-vaibhav.onrender.com/users",
       {
         method: "GET",
         headers: {
