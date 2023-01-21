@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 main {
   width: 90%;
   margin: auto;
@@ -7,7 +11,6 @@ main {
 
 section {
   width: 70%;
-  /* border: 2px solid green; */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -64,4 +67,21 @@ aside {
   animation-timing-function: ease-in-out;
   animation-duration: 2s;
   animation-delay: 0.1s;
+}
+@media screen and (max-width: 1080px) {
+  #accordionFlushExample {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 720px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    width: 90%;
+  }
+  aside {
+    width: 90%;
+  }
 }
