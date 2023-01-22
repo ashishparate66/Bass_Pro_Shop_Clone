@@ -122,12 +122,15 @@ section > h4 {
 .show {
   visibility: visible;
 }
+#accordion-body {
+  font-weight: 200;
+}
 @media screen and (max-width: 1080px) {
   #grid-1 {
     grid-template-columns: repeat(3, 1fr);
   }
   .bottom {
-    width: 100%;
+    width: 90%;
   }
 
   section {
@@ -142,16 +145,16 @@ section > h4 {
     padding: 10px;
   }
   .bottom {
-    width: 100%;
+    width: 90%;
   }
 
   section {
-    margin: 0px 10px;
+    margin: 0px 20px;
   }
   .lflex {
     flex-direction: column;
   }
   #sPrice {
-    padding: 2px;
+    margin: 10px;
   }
 }
