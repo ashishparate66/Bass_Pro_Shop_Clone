@@ -1,6 +1,16 @@
+
 h2 {
     text-align: center;
 
+}
+#backBtn{
+    width: 90%;
+    margin: auto;
+   
+}
+#backBtn>a{
+   
+    color: #333;
 }
 
 #heading_top_billing {
