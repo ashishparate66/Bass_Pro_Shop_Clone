@@ -175,6 +175,7 @@ function fishing_pro1() {
               <button id="ad_btn_fish">Add Product</button>
               <button id="de_btn_fish">Delete Product</button>
               <button id="up_btn_fish">Update Product</button>
+              <button id="sort_Product">Sort Products</button>
         </div>
       `;
     document.querySelector("#Right").innerHTML = "";
@@ -188,6 +189,7 @@ function fishing_pro1() {
     add_button_fish();
     deleteProduct_fish();
     update_Product_fish();
+    sort_Products();
 }
 
 function boating_pro() {
@@ -217,6 +219,7 @@ function boating_pro1() {
               <button id="ad_btn_boat">Add Product</button>
               <button id="de_btn_boat">Delete Product</button>
               <button id="up_btn_boat">Update Product</button>
+              <button id="sort_Product">Sort Products</button>
         </div>
       `;
     document.querySelector("#Right").innerHTML = "";
@@ -230,6 +233,7 @@ function boating_pro1() {
     add_button_boat();
     deleteProduct_boat();
     update_Product_boat();
+    // sort_Products();
 }
 
 function shooting_pro() {
@@ -259,6 +263,7 @@ function shooting_pro1() {
               <button id="ad_btn_shoot">Add Product</button>
               <button id="de_btn_shoot">Delete Product</button>
               <button id="up_btn_shoot">Update Product</button>
+              <button id="sort_Product">Sort Products</button>
         </div>
       `;
     document.querySelector("#Right").innerHTML = "";
@@ -272,6 +277,7 @@ function shooting_pro1() {
     // add_button_shoot();
     // deleteProduct_shoot();
     // update_Product_shoot();
+    // sort_Products();
 }
 
 function recent_categories() {
@@ -321,25 +327,26 @@ async function FetchProduct_fish(){
             }
         );
         if (res.ok == true) {
-            let data = await res.json();
-            DisplayProduct_fish(data);
+            let Fish_data = await res.json();
+            DisplayProduct_fish(Fish_data);
           }
     } catch {
         console.log("Failed to fetch Product");
     }
 }
 
-function DisplayProduct_fish(data) {
+function DisplayProduct_fish(Fish_data) {
     Rightbox.innerHTML = "";
     Rightbox.innerHTML = `
         <div id="Cards">
-            ${data
+            ${Fish_data
                 .map((el) => {
                     return `<div Class="SmallCards">
-                        <img src="${el.img}" alt="Error">
-                              <h3>${el.title}</h3>
-                              <h4>${el.brand}</h4>
-                              <h3>Rs. ${el.price}</h3>
+                        <img src="${el.img}" alt="Error" style="background-color:white"><br>
+                              <h2>ID:- ${el.id}</h2><br>
+                              <h2>${el.title}</h2><br>
+                              <h2>${el.brand}</h2><br>
+                              <h2>Rs. ${el.price}</h2><br>
                             </div>`;
                     })
                     .join(" ")} 
@@ -356,7 +363,7 @@ function add_button_fish() {
 
     Rightbox.innerHTML = `
          <div id="FormInput">
-            <h2 id="inputHeader">Product Form</h2>
+            <h2 style="font-size:25px" id="inputHeader">Fishing Product Form</h2>
              <form>
                 
                 <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
@@ -438,16 +445,25 @@ function add_fish(finalProduct) {
                      ${finalProduct
                        .map((el) => {
                          return `<div class="displayCard">
-                                  <img src="${el.image}" alt="Error">
-                                  <p>${el.id}</p>
-                                  <p>${el.brand}</p>
-                                  <p>${el.title}</p>
-                                  <p>Rs. ${el.price}</p>
-                               </div>`;
+                               <img src="${el.img}" alt="Error" style="background-color:white"><br>
+                               <h2>ID:- ${el.id}</h2><br>
+                               <h2>${el.title}</h2><br>
+                               <h2>${el.brand}</h2><br>
+                               <h2>Rs. ${el.price}</h2><br>
+                             </div>`;
                        })
                        .join(" ")}
          `;
 }
+
+// // sort fish products
+// let origRes = await Fish_data.json()
+//     renderItem(origRes)
+//     sort_Product.addEventListener("click", (e) => {
+//       origRes.sort((a,b) => a.price - b.price)
+//       renderItem(origRes)
+//     })
+
 
 // Delete fishing product
 
@@ -478,7 +494,7 @@ function InputTag_fish2() {
 async function InputTag_fish2_1(ids) {
   try {
     let product = await fetch(
-      `"https://6398195577359127a04715b0.mockapi.io/products"${ids}`,
+      `https://6398195577359127a04715b0.mockapi.io/products/${ids}`,
       {
         method: "Delete",
         headers: {
@@ -508,7 +524,7 @@ function update_Product_fish() {
 
     Rightbox.innerHTML = `
          <div id="FormInput">
-            <h2 id="inputHeader">Product Form</h2>
+            <h2 id="inputHeader" style="font-size:25px">Update Product Form</h2>
              <form>
                 
                 <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
@@ -518,7 +534,7 @@ function update_Product_fish() {
                 <input type="url" id="img" required="Mandatory Field" placeholder="Enter Product Url" >
                 <br>
                 
-                <input type="text" id="brand" required="Mandatory Field" placeholder="Enter Product Category" >
+                <input type="text" id="category" required="Mandatory Field" placeholder="Enter Product brand" >
                 <br>
                 
                 <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
@@ -545,16 +561,16 @@ function update_fish() {
     for (let i = 0; i < productInput.length - 1; i++) {
       newProduct[productInput[i].id] = productInput[i].value;
     }
-    InputTag_fish3(newProduct);
+    InputTag_fish2(newProduct);
   });
 }
 
-async function InputTag_fish3(data) {
+async function InputTag_fish2(data) {
   var arr1 = [];
   try {
     let ids = document.querySelector("#id").value;
     let product = await fetch(
-      `"https://6398195577359127a04715b0.mockapi.io/products"${ids}`,
+      `https://6398195577359127a04715b0.mockapi.io/products/${ids}`,
       {
         method: "PUT",
         headers: {
@@ -588,11 +604,11 @@ function addU_fish(finalProduct) {
                     ${finalProduct
                       .map((el) => {
                         return `<div class="displayCard">
-                                        <img src="${el.image}" alt="Error">
-                                        <p>${el.id}</p>
-                                        <p>${el.brand}</p>
-                                        <p>${el.title}</p>
-                                        <p>Rs. ${el.price}</p>
+                                    <img src="${el.image}" alt="Error" ><br>
+                                    <p>${el.id}</p><br>
+                                    <p>${el.brand}</p><br>
+                                    <p>${el.title}</p><br>
+                                    <p>Rs. ${el.price}</p><br>
                                 </div>`;
                       })
                       .join(" ")}
@@ -646,10 +662,11 @@ function DisplayProduct_boat(data) {
       ${data
         .map((el) => {
             return `<div Class="SmallCards">
-                <img src="${el.img}" alt="Error">
-                      <h3>${el.title}</h3>
-                      <h4>${el.brand}</h4>
-                      <h3>Rs. ${el.price}</h3>
+                <img src="${el.img}" alt="Error" style="background-color:white"><br>
+                      <h2>ID:- ${el.id}</h2><br>
+                      <h2>${el.title.substring(0,20)}</h2><br>
+                      <h2>${el.brand}</h2><br>
+                      <h2>Rs. ${el.price}</h2><br>
                     </div>`;
             })
             .join(" ")} 
@@ -676,7 +693,7 @@ function add_button_boat() {
                 <input type="url" id="image" required="Mandatory Field" placeholder="Enter Product Url" >
                 <br>
                 
-                <input type="text" id="category" required="Mandatory Field" placeholder="Enter Product Category" >
+                <input type="text" id="category" required="Mandatory Field" placeholder="Enter Product brand" >
                 <br>
                 
                 <input type="text" id="title" required="Mandatory Field" placeholder="Enter Product Title" >
@@ -711,7 +728,7 @@ function InputTag_boat() {
 async function AddPro_boat(data) {
   try {
     let product = await fetch(
-      "https://6398195577359127a04715b0.mockapi.io/products",
+      "https://6398195577359127a04715b0.mockapi.io/boating",
       {
         method: "POST",
         headers: {
@@ -727,7 +744,7 @@ async function AddPro_boat(data) {
       setTimeout(() => {
         document.querySelector("#id").value = "";
         document.querySelector("#image").value = "";
-        document.querySelector("#category").value = "";
+        document.querySelector("#brand").value = "";
         document.querySelector("#title").value = "";
         document.querySelector("#price").value = "";
       }, 1000);
@@ -748,10 +765,10 @@ function add_boat(finalProduct) {
                      ${finalProduct
                        .map((el) => {
                          return `<div class="displayCard">
-                                  <img src="${el.image}" alt="Error">
+                                  <img src="${el.img}" alt="Error">
                                   <p>${el.id}</p>
                                   <p>${el.brand}</p>
-                                  <p>${el.title}</p>
+                                  <p>${el.title.substring(0,20)}</p>
                                   <p>Rs. ${el.price}</p>
                                </div>`;
                        })
@@ -773,22 +790,22 @@ function deleteProduct_boat() {
                   </form>   
               </div>
           `;
-    InputTag_fish2();
+    InputTag_boat2();
   });
 }
 
-function InputTag_fish2() {
+function InputTag_boat2() {
   document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
     let ids = document.querySelector("#id").value;
-    InputTag_fish2_1(ids);
+    InputTag_boat2_1(ids);
   });
 }
 
 async function InputTag_boat2_1(ids) {
   try {
     let product = await fetch(
-      `"https://6398195577359127a04715b0.mockapi.io/boating"${ids}`,
+      `https://6398195577359127a04715b0.mockapi.io/boating/${ids}`,
       {
         method: "Delete",
         headers: {
@@ -818,7 +835,7 @@ function update_Product_boat() {
 
     Rightbox.innerHTML = `
          <div id="FormInput">
-            <h2 id="inputHeader">Product Form</h2>
+            <h2 id="inputHeader">Update Product Form</h2>
              <form>
                 
                 <input type="text" id="id" placeholder="Enter Product Id" required maxlength="2">
@@ -864,7 +881,7 @@ async function InputTag_boat3(data) {
   try {
     let ids = document.querySelector("#id").value;
     let product = await fetch(
-      `"https://6398195577359127a04715b0.mockapi.io/boating"${ids}`,
+      `https://6398195577359127a04715b0.mockapi.io/boating/${ids}`,
       {
         method: "PUT",
         headers: {
@@ -971,7 +988,7 @@ function tableStructure() {
               <thead id="head">
                     <tr class="navRow">
                         <td class="details">Id</td>
-                        <td class="details">Username</td>
+                        <td class="details">User</td>
                         <td class="details">Mobile</td>
                         <td class="details">Email Id</td>
                         <td class="details">Password</td>
@@ -1030,8 +1047,8 @@ function tableStructu(data) {
           .map((el) => {
             return `<tr class="navRow">
                       <td class="details">${el.id}</td>
-                      <td class="details">${el.username}</td>
-                      <td class="details">${el.mobileNo}</td>
+                      <td class="details">${el.firstName+" "+el.Lastname}</td>
+                      <td class="details">${el.phone}</td>
                       <td class="details">${el.email}</td>
                       <td class="details">${el.password}</td>
                   </tr>`;
@@ -1114,8 +1131,8 @@ function tableStructu_1(data) {
           .map((el) => {
             return `<tr class="navRow">
                       <td class="details_1">${el.id}</td>
-                      <td class="details_1">${el.Username}</td>
-                      <td class="details_1">${el.Password}</td>
+                      <td class="details_1">${el.email}</td>
+                      <td class="details_1">${el.password}</td>
                   </tr>`;
           })
           .join(" ")}
