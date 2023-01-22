@@ -7,7 +7,7 @@ let three = document.getElementById("three")
 
 async function fetchData() {
 
-    let data = await fetch("./product.json")
+    let data = await fetch("/API/product.json")
     let finalData = await data.json()
     arrangeData(finalData.boating_sub)
 }

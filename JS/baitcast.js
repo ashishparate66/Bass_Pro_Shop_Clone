@@ -5,7 +5,7 @@ let btn = document.getElementById("button-block")
 let two = document.getElementById("two")
 async function fetchData() {
 
-    let data = await fetch("./product.json")
+    let data = await fetch("/API/product.json")
     let finalData = await data.json()
     arrangeData(finalData.Fish_sub)
 }
