@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./login.css">
+
 </head>
 <style>
- 
+  #topnavbar {
 
+    color: white;
+    width: 100%;
+    height: 40px;
 
-#topnavbar {
-
-color: white;
-width: 100%;
-height: 40px;
-
-background-color: black;
-display: flex;
-justify-content: center;
-align-items: center;  
-}
-
-
-span{
+    background-color: black;
     display: flex;
-   
-}
-#secondnavbar{
-   width: 100%;
-   margin: auto;
-   background-color: white;
-   color: white;
-   position: sticky;
-   top: 0px;
-  height: 30px;
-  display: flex;
-  align-items: center; 
-  justify-content:space-between;
-  
-  
-}
-#hr1{
-  position: sticky;
-   top: 30px;
-}
-#secondleft{
-  
-   width: 30%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center; 
-
-}
-#secondright{
-    
-    width: 55%;
-    display: flex;
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
-    
+  }
 
-}
-#secondright img{
-     width: 8%;
-    height: 30px;
-  
-   
-}
-a{
-     text-decoration: none;
-     color: black;
+
+  span {
+    display: flex;
 
   }
 
-  #thirdnavbar{
+  #secondnavbar {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    color: white;
+    position: sticky;
+    top: 0px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+
+  #hr1 {
+    position: sticky;
+    top: 30px;
+  }
+
+  #secondleft {
+
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  #secondright {
+
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+  }
+
+  #secondright img {
+    width: 8%;
+    height: 30px;
+
+
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+  }
+
+  #thirdnavbar {
     display: flex;
     position: sticky;
     top: 30px;
@@ -85,926 +91,831 @@ a{
     height: 80px;
     background-color: white;
   }
-  #thirdleft{
-   
+
+  #thirdleft {
+
     width: 7%;
     padding-left: 40px;
 
-  
+
   }
-  #thirdleft img{
+
+  #thirdleft img {
     width: 100%;
   }
 
-  #thirdmid{
+  #thirdmid {
     border: 3px solid black;
     width: 50%;
-  margin-top: 8px;
+    margin-top: 8px;
     display: flex;
     align-items: center;
-   padding: 16px;
-   border-radius: 40px;
-   height:15px
-}
-#thirdmid i{
-  
-  font-size: larger;
-  padding-left: 70px;
-}
+    padding: 16px;
+    border-radius: 40px;
+    height: 15px
+  }
 
-#thirdmid input{
+  #thirdmid i {
+
+    font-size: larger;
+    padding-left: 70px;
+  }
+
+  #thirdmid input {
     background: transparent;
     border: 0px;
-    outline:0px;
-    width:80%
-}
+    outline: 0px;
+    width: 80%
+  }
 
 
-  #thirdright{
-    
-    width:12%;
+  #thirdright {
+
+    width: 12%;
     display: flex;
-     align-items: center;
-     padding-left: 20px;
+    align-items: center;
+    padding-left: 20px;
 
   }
-  #thirdright img{
+
+  #thirdright img {
     width: 50%;
-   padding-right: 20px;
+    padding-right: 20px;
   }
 
 
-#fourthnavbar{
-background-color: white;
-width:100%;
- margin:auto;
- display:flex;
- justify-content: space-between;
- align-items: center;
- height: 25px;
- font-size: large;
- position: sticky;
-   top: 110px;
-}
-#two{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-#firstblock{
- 
-  width: 100%;
-}
-#firstblock img{
-  width: 100%;
-}
-#third{
-  width: 100%;
-}
-#third img{
-  width: 100%;
-}
-#four{
-  display: grid;
-      width: 100%;
-      margin: auto;
-    grid-template-columns: repeat(2,1fr);
-    
-  display: flex;
-  width: 100%;
+  #fourthnavbar {
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    font-size: large;
+    position: sticky;
+    top: 110px;
+  }
 
-}
-#four img{
-  width:50%
-}
-#five{
-  display: flex;
-  justify-content: center;
-}
+  #two {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
 
-#six{
-  display: flex;
-}
+  #firstblock {
 
-#six p{
- 
-  display: flex;
-  justify-content: center;
-}
-#seven{
+    width: 100%;
+  }
 
-  display: flex;
-  justify-content: center;
-  background-color: yellow;
-}
-#eight{
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
-}
-#nine{
+  #firstblock img {
+    width: 100%;
+  }
 
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-#nine img{
-  width: 8%;
-}
-#ten{
-  display: flex;
- 
-  height: 300px;
-  align-items: center;
+  #third {
+    width: 100%;
+  }
 
-}
-#t1{
- 
-  width: 25%; 
-  height: 200px;
-  
-}
-#t2{
- 
-  width: 25%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
+  #third img {
+    width: 100%;
+  }
 
-}
-#t3{
- 
-  width: 25%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-}
-#t4{
- 
-  width: 25%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-}
+  #four {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
 
-#ele{
- 
-  padding-top: 40px;
-  width: 80%;
- padding-left: 50px;
-  display: flex;
- justify-content: space-between;
-  height: 60px;
-  align-items: center;
- 
-}
-#ele img{
-  width: 30px;
-}
-#e2{
+    display: flex;
+    width: 100%;
 
-  display: flex;
-}
-#e3{
- 
-  display: flex;
-}
-#e4{
- 
-  display: flex;
-}
-#e5{
+  }
 
-  display: flex;
-}
-#twelve{
-  display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-}
-#t14 img{
-  width: 20px;
-  height: 30px;
-  padding-left: 20px;
-}
-#t141{
-  display: flex;
- align-items: center;
-  padding-right: 20px;
-}
-#t142{
-  display: flex;
- align-items: center;
-  padding-right: 20px;
-}
-#t143{
-  display: flex;
- align-items: center;
-  padding-right: 20px;
-}
-#thirt{
+  #four img {
+    width: 50%
+  }
 
-  display: flex;
-  justify-content: space-between;
-}
-#tr{
+  #five {
+    display: flex;
+    justify-content: center;
+  }
 
-  display: flex;
-  width: 400px;
-  justify-content: space-around;
-  padding-right: 80px;
-  font-weight: 300;
-}
-#tf{
-  display: flex;
- 
-  justify-content: space-around;
-  width: 500px;
-}
-#tf img{
-  width:40px;
+  #six {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
-}
-#lfooter{
-  display: flex;
-  justify-content: space-around;
-}
+  #six p {
 
-#lfooter1{
-  display: flex;
-  padding-left: 15px;
-  width: 40%;
-  justify-content: space-around;
-}
+    display: flex;
+    justify-content: center;
+  }
 
-#lll{
-  padding-left: 20px;
-}
+  #seven {
+
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+  }
+
+  #eight {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+  #nine {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #nine img {
+    width: 8%;
+  }
+
+  #ten {
+    display: flex;
+
+    height: 300px;
+    align-items: center;
+
+  }
+
+  #t1 {
+
+    width: 25%;
+    height: 200px;
+
+  }
+
+  #t2 {
+
+    width: 25%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  #t3 {
+
+    width: 25%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #t4 {
+
+    width: 25%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #ele {
+
+    padding-top: 40px;
+    width: 80%;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+
+  }
+
+  #ele img {
+    width: 30px;
+  }
+
+  #e2 {
+
+    display: flex;
+  }
+
+  #e3 {
+
+    display: flex;
+  }
+
+  #e4 {
+
+    display: flex;
+  }
+
+  #e5 {
+
+    display: flex;
+  }
+
+  #twelve {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  #t14 img {
+    width: 20px;
+    height: 30px;
+    padding-left: 20px;
+  }
+
+  #t141 {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  #t142 {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  #t143 {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  #thirt {
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #tr {
+
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    padding-right: 80px;
+    font-weight: 300;
+  }
+
+  #tf {
+    display: flex;
+
+    justify-content: space-around;
+    width: 500px;
+  }
+
+  #tf img {
+    width: 40px;
+
+  }
+
+  #lfooter {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #lfooter1 {
+    display: flex;
+    padding-left: 15px;
+    width: 40%;
+    justify-content: space-around;
+  }
+
+  #lll {
+    padding-left: 20px;
+  }
 
 
-@media screen and (min-width:500px) and (max-width:800px) {
-        #four{
-         grid-template-columns: repeat(1,1fr);
-        } 
-        #six{
-          grid-template-columns: repeat(3,1fr);
-        }
-        
-        #nine{
-         grid-template-columns: repeat(4,1fr);
-        }
-        #tf{
-         grid-template-columns: repeat(5,1fr);
-        }
-        #thirdright{
-          display: none;
-        }
-        #thirdleft{
-          display: none;
-        }
-        #fourthnavbar{
-          display: none;
-        }
-        #secondleft{
-          display: none;
-        }
-}
-        
-    
-    @media screen and (max-width:500px) {
-      #four{
-         grid-template-columns: repeat(1,1fr);
-        }  
-        #six{
-          grid-template-columns: repeat(2,1fr);
-        }
-        #nine{
-         grid-template-columns: repeat(2,1fr);
-        }
-        #tf{
-         grid-template-columns: repeat(5,1fr);
-        }
-        #thirdright{
-          display: none;
-        }
-        #thirdleft{
-          display: none;
-        }
-        #fourthnavbar{
-          display: none;
-        }
-        #secondleft{
-          display: none;
-        }
-       
-    }
-    #landingpagebox{
-      width: 90%;
-      margin: auto;
+  @media screen and (min-width:500px) and (max-width:800px) {
+    #four {
+      grid-template-columns: repeat(1, 1fr);
     }
 
-    h3{
-   display: inline;
-     /* transition:all 0.2s ease-in-out 0.1s;  */
-     padding: 4px 10px;
-
-    }
-    h3:hover{
-      cursor: pointer;
-      background-color: black;
-      color: white;
-
+    #six {
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    #content{
-      width: 80%;
-      display: flex;
-      gap: 1rem;
-      background-color:white;
-      border: 2px solid black;
-      color: black;
-     position:absolute;
-     top: 2rem;
-      cursor: pointer;
-      z-index: 2;
-      /* transition:all 0.1s ease-in-out 0.1s; */
+    #nine {
+      grid-template-columns: repeat(4, 1fr);
     }
-    
 
-    
+    #tf {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    #thirdright {
+      display: none;
+    }
+
+    #thirdleft {
+      display: none;
+    }
+
+    #fourthnavbar {
+      display: none;
+    }
+
+    #secondleft {
+      display: none;
+    }
+  }
 
 
+  @media screen and (max-width:500px) {
+    #four {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
+    #six {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
+    #nine {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
+    #tf {
+      grid-template-columns: repeat(5, 1fr);
+    }
 
+    #thirdright {
+      display: none;
+    }
 
+    #thirdleft {
+      display: none;
+    }
 
+    #fourthnavbar {
+      display: none;
+    }
 
+    #secondleft {
+      display: none;
+    }
 
+  }
 
+  #landingpagebox {
+    width: 90%;
+    margin: auto;
+  }
 </style>
+
 <body>
-<!-- =============================login form===================================== -->
-<div class="form_cont" id="form_cont">
-  <form id="login_Form">
-
-    <div id="formcontainer" class="formcontainer">
-      <button class="closebutton" id="closebutton">&times;</button>
-
-      <div id="loginheading" class="loginheading">
-        <h3>
 
 
-          Sign-in to your Bass Pro Shops account</h3>
-      </div>
-      <div class="emailbox" id="emailbox">
-        <div class="emailname" id="emailname">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <!-- ===============login form================= -->
+
+  <div class="form_cont" id="form_cont">
+    <form id="login_Form">
+
+      <div id="formcontainer" class="formcontainer">
+        <div id="closeadmin" class="closeadmin">
+          <button class="closebutton" id="closebutton">&times;</button>
+
+          <!-- <a href="#" class="adminloginicon" id="adminloginicon"><img src="https://img.icons8.com/pastel-glyph/2x/user-male-circle.png" alt=""></a> -->
+        </div>
+
+
+        <div id="loginheading" class="loginheading">
+          <h3>
+
+
+            Sign-in to your Bass Pro Shops account</h3>
+        </div>
+        <div class="emailbox" id="emailbox">
+          <div class="emailname" id="emailname">
+            <p>
+              Email
+            </p>
+          </div>
+          <div class="emailinput" id="emailinput">
+            <input type="email" id="Login_Email">
+          </div>
+        </div>
+        <div class="password" id="password">
+          <div class="passwordhead">
+            <p>
+              Password
+            </p>
+          </div>
+          <div class="passwordinput">
+            <input type="password" id="Login_Password">
+          </div>
+        </div>
+
+        <div class="submitbutton" id="submitbutton">
+          <input type="submit" value="SIGN IN" id="signin">
+        </div>
+        <div class="horizantal">
+          <div class="remembercheckbox" id="remembercheckbox">
+            <input type="checkbox" class="remcheck">Remember Me
+          </div>
+          <div>
+            <div><a href="./forgotpassword.html">Forgot password?</a></div>
+
+          </div>
+        </div>
+        <div class="createaccount">
+          <a href="./signup.html">
+            <input type="button" class="createaccountbutton" value="CREATE AN ACCOUNT">
+          </a>
+        </div>
+        <div class="admincontainer" id="admincontainer">
+          <a href="./Admin.html">
+            <input type="button" class="admin" id="admin" value="ADMIN">
+          </a>
+        </div>
+
+        <div class="finaldescription">
           <p>
-            Email
+            CLUB members can now manage their account by signing in through Bass Pro Shops above. Learn More
           </p>
         </div>
-        <div class="emailinput" id="emailinput">
-          <input type="email" id="Login_Email">
-        </div>
-      </div>
-      <div class="password" id="password">
-        <div class="passwordhead">
-          <p>
-            Password
-          </p>
-        </div>
-        <div class="passwordinput">
-          <input type="password" id="Login_Password">
-        </div>
-      </div>
 
-      <div class="submitbutton" id="submitbutton">
-        <input type="submit" value="SIGN IN" id="signin">
       </div>
-      <div class="horizantal">
-        <div class="remembercheckbox" id="remembercheckbox">
-          <input type="checkbox" class="remcheck">Remember Me
-        </div>
-        <div>
-          <div><a href="./forgotpassword.html">Forgot password?</a></div>
+    </form>
+  </div>
 
-        </div>
-      </div>
-      <div class="createaccount">
-        <a href="./signup.html">
-          <input type="button" class="createaccountbutton" value="CREATE AN ACCOUNT">
-        </a>
-      </div>
-      <div class="finaldescription">
-        <p>
-          CLUB members can now manage their account by signing in through Bass Pro Shops above. Learn More
-        </p>
-      </div>
-    </div>
-  </form>
-</div>
-<!-- ==========================login form ends here=========================== -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  
-  
+  <!-- ==================================================================== -->
 
   <nav id="topnavbar">
     <div id="tnbleft">
-        <span> Window Clothing | Shop Now </span>
+      <span> Window Clothing | Shop Now </span>
     </div>
   </nav>
 
 
 
   <div id="landingpagebox">
-    
-   
-      
-     
-         <nav id="secondnavbar">
-            <div id="secondleft">
-              <img src="" alt="">  
-              <a href="#0">My Store: Find a store </a>
-              <a href="">FREE Shipping on Orders $50+</a>
-            </div>
-            <div id="secondright">
-                <a href="#0"> Boats</a>
-                <a href="#0">Off Road</a>
-                <a href="#0">Resorts & Restaurants</a>
-                <a href="#0">Outdoor Tips</a>
-                <a href="#0"> CLUB</a>
-                <a href="#0">Gift Cards</a>
-                <a href="#0">Help</a>
-                 <img src="https://media.istockphoto.com/id/1316476032/vector/maple-pharmacy-logo-design-canadian-medical-pharmacy-logo-red-maple-leaf-with-ayurveda.jpg?s=612x612&w=0&k=20&c=qu443cZs1hRycpmLgbLG4NQOJPesAF6jA_rBvC7WboQ= " alt="error">
-                <a href="#0">Canada</a>
-             </div>
-          </nav>
-          <div id="hr1"><hr></div> 
-
-          <nav id="thirdnavbar">
-              <div id="thirdleft">
-                  <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/bass-pro-logo-2x.png" alt="">
-              </div>
-
-              <div id="thirdmid">
-                <input type="text"id="myInput" placeholder="What can we help you find?" >
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-
-              <div id="thirdright">
-                 <a href="#" id="loginicon"><img src="https://img.icons8.com/pastel-glyph/2x/user-male-circle.png" alt=""></a> 
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3737/3737372.png" alt=""></a> 
-                <a href="#"><i class="fa-solid fa-user"></i></a> 
-              </div>
-          </nav>
-          <hr>
-
-
-          
-          <nav id="fourthnavbar">
-       
-              
-                <a href="#0" target="_blank"><h3 id="btn">Fishing</h3></a>
-              
-               
-                <div id="content">
-                <div id="c1">
-                  <div>
-                  <a href="#" >
-                  <b> FISHING</b> </a>
-                  <p>Fishing REELS</p>
-                  <p>Baitcast Reels</p>
-                  <p>Spinning Reels</p>
-                  <p>Saltwater Reels</p>
-                 
-                  </div>
-                <div>
-                  <a href="#" ><b>Fishing Rods</b> 
-                  </a>
-                  <p>Casting Rods</p>
-                  <p>Spinning Rods</p>
-                  <p>Saltwater Rods</p>
-                  <p>View All</p>
-                </div>
-
-              
-              </div>
-
-              <div id="c2">
-                <div>
-                  <a href="#" ><b>ROD & REEL COMBOS</b> </a>
-                  <p>Casting Rods</p>
-                  <p>Spinning Rods</p>
-                  <p>Saltwater Rods</p>
-                </div>
-
-               <div>
-                 <a href=""><b>LURES</b></a>
-                 <p>Hard Bait Lures</p>
-                 <p>Soft Bait Lures</p>
-                <p>Jigs</p>
-                <p>View All</p>
-                </div>
-
-               
-              </div>
-
-
-              <div id="c3">
-                <div>
-                  <a href=""><b>FISHING LINE,HOOKS & WEIGHTS</b></a>
-                  <p>Fishing line</p>
-                  <p>Fish Hooks</p>
-                  <p>Weights & Sinkers</p>
-                  <p>Jig Heads</p>
-                  <p>View All</p>
-                </div>
 
-                <div>
-                <a href=""><b>TACKLE BOXES & BAGS</b></a>
-                <p>Tackle Boxers</p>
-                <p>Tackle Bags</p>
-                <p>Utility Boxers</p>
-            
-              </div>
 
 
-              </div>
-              
 
+    <nav id="secondnavbar">
+      <div id="secondleft">
+        <img src="" alt="">
+        <a href="#0">My Store: Find a store </a>
+        <a href="">FREE Shipping on Orders $50+</a>
+      </div>
+      <div id="secondright">
+        <a href="#0"> Boats</a>
+        <a href="#0">Off Road</a>
+        <a href="#0">Resorts & Restaurants</a>
+        <a href="#0">Outdoor Tips</a>
+        <a href="#0"> CLUB</a>
+        <a href="#0">Gift Cards</a>
+        <a href="#0">Help</a>
+        <img
+          src="https://media.istockphoto.com/id/1316476032/vector/maple-pharmacy-logo-design-canadian-medical-pharmacy-logo-red-maple-leaf-with-ayurveda.jpg?s=612x612&w=0&k=20&c=qu443cZs1hRycpmLgbLG4NQOJPesAF6jA_rBvC7WboQ= "
+          alt="error">
+        <a href="#0">Canada</a>
+      </div>
+    </nav>
+    <div id="hr1">
+      <hr>
+    </div>
 
-              <div id="c4">
-                 <div>
-                 <a href=""><b>SALTWATER FISHING</b></a>
-                  <p> Saltwater Reels</p>
-                 <p>Saltwater Rods</p>
-                 <p>Saltwater Combos</p>
-                 <p>Saltwater Lures</p>
-                 <p>View All</p>
-              </div>
-              </div>
-           
-           
-           
-            </div>
+    <nav id="thirdnavbar">
+      <div id="thirdleft">
+        <img
+          src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/bass-pro-logo-2x.png"
+          alt="">
+      </div>
 
+      <div id="thirdmid">
+        <input type="text" id="myInput" placeholder="What can we help you find?">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
 
+      <div id="thirdright">
+        <a href="#" id="loginicon"><img src="https://img.icons8.com/pastel-glyph/2x/user-male-circle.png" alt=""></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3737/3737372.png" alt=""></a>
+        <a href="#"><i class="fa-solid fa-user"></i></a>
+      </div>
+    </nav>
+    <hr>
 
-      
-                 
 
+
+    <nav id="fourthnavbar">
 
-               
 
+      <a href="#0" target="_blank"><b>Fishing</b>
+      </a>
 
-              
 
-                
-                <a href="#0" target="_blank"><h3 id="btn1">Boating</h3></a>
-                
-              
-              
-             
-
-
-
-
-
-
-                <a href="#0" target="_blank"><b>Shooting</b></a>
-                <a href="#0" target="_blank"><b>Hunting</b></a>
-                <a href="#0" target="_blank"><b>Camping</b></a>
-                <a href="#0" target="_blank" ><b>Clothing</b></a>
-                <a href="#0" target="_blank"><b>Footwear</b></a>
-                <a href="#0" target="_blank"><b>Ride</b></a>
-                <a href="#0" target="_blank" ><b>Home & Gifts</b></a>
-                <a href="#0" target="_blank"><b>Bargain Cave</b></a>
-        
-              </nav>
-
-
-
-
-          <hr>
-          <div id="firstblock">
-           <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1920/v1673277784/DigitalCreative/2023/Homepage/wk2-1-11/BPS_Homepage-winter.png" alt="">
-          </div>
-             
-          <div id="two">
-            <p><b>HOT THIS WEEK</b> </p>
-          </div>
-          <hr>
-          <div id="main">
-           <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2893831.json?$Prod_PLPThumb$" id="slideshow" alt="error">
-         <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3358463.json?$Prod_PLPThumb$" id="slide" alt="error">
-           <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$" id="show" alt="error">
-            <img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$"  id="show2" alt="">
-<img src="https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3037740.json?$Prod_PLPThumb$" id="show3" alt="">
-
-          </div>
-
-
-
-
-
-
-          <div id="third">
-            <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1673968097/DigitalCreative/2023/Homepage/wk2-1-11/cep-banner.png" alt="">
-          </div>
-            
-          <div id="four">
-            <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_945/v1673279793/DigitalCreative/2023/Homepage/wk2-1-11/After-hunt-sub.png" alt="">
-          <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_945/v1673279793/DigitalCreative/2023/Homepage/wk2-1-11/BPS_saltwater-sub.png" alt="">
-          </div>
-
-         <div id="five"> <p><b>SHOP BY CATEGORY</b></p></div>
-         
-         <div id="six">
-         <div><img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-archery.png" alt=""><p><b> ARCHERY</b></p></div> 
-        <div><img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-optics.png" alt=""><p><b>OPTICS</b></p></div> 
-        <div><img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-hunting-clothing.png" alt=""><p><b>HUNTING CLOTHING</b></p></div>  
-        <div><img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-hunting-Waders.png" alt=""><p><b>HUNTING WADERS</b></p></div> 
-        <div><img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-flannel.png" alt=""><p><b>FLANNEL</b></p></div> 
-        </div>
-        <br>
-        <br>
-
-        <div id="seven">
-          <img src="https://assets.basspro.com/image/upload/c_scale,f_auto,h_88,q_auto,w_1054/v1668626316/DigitalCreative/2022/Homepage/Black-Friday/low-price-title.png" alt="">
-        </div>
-
-        <div id="eight"><p><b>OUR TOP BRANDS</b></p></div>
-
-        <div id="nine">
-          <img src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1667848670/DigitalCreative/Site-Elements/bps-logo-mobile.png" alt="">
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/red-head/redhead-488.png" alt="">
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/cabelas/cabelas-logo.svg" alt="">
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/garmin/garmin.svg" alt="">
-
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/columbia/columbia-blue.svg" alt="">
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/vortex/vortex.svg" alt="">
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/leupold/leupold-black-vertical.svg" alt="">
-          <img src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/under-armour/underarmour-black.svg" alt="">
-
-        </div>
-
-        <!-- <div id="ten">
-       <div id="t1"> <img src=" https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/home-page/club/images/card_BPS_classic-new.png" alt=""></div>  
-      <div id="t2"><p>SIGN UP TODAY <br> <span>AND EARN UP TO</span> 
-        $50 In CLUB Points</p></div> 
-        <div id="t3"><p>Club Member <span> Sign In</span>
-          Manage your account online.</p></div>
-          <div id="t4"><p>CLUB Member Offers <span> Check out the latest perks and discounts for CLUB Members.</span>
-           </p></div>
-          </div> -->
-
-          <div id="ten">
-            <img src="./footer image.png" alt="" style="width:100%; height:100%">
-           </div>
-
-
-           <div id="ele">
-          <div id="e1"><p><b>CONTACT BASS PRO SHOPS</b></p></div>  
-
-           <div id="e2"><img src="https://tse1.mm.bing.net/th?id=OIP.G8P_Yslc7bxb7HjdkGtuHwHaG3&pid=Api&P=0" alt="">
-            <p>Live Chat</p></div> 
-            
-           <div id="e3"> <img src="https://tse2.mm.bing.net/th?id=OIP.iNiPGHKQk1i5f_ppXLl7ZgHaFn&pid=Api&P=0" alt=""><p>Email Us</p></div> 
-           
-           <div id="e4"><img src="https://tse4.mm.bing.net/th?id=OIP.mxwvp9lmd-iy1EeIYuUe7wHaHa&pid=Api&P=0" alt=""><p>1-800-227-7776</p></div>
-           
-           <div id="e5"><img src="https://tse4.mm.bing.net/th?id=OIP.6I8GSRo273wTecfBSQ7k5wHaHa&pid=Api&P=0" alt=""><p>FAQs</p></div>
-            
-           <div id="e6"> <p>Support ID: UBD290659748</p></div>
-          </div>
-          <hr>
-          
-
-           
-
-           <div id="twelve" >
-
-             <div id="t11" >
-              <p>Help</p>
-              <p>Order Status</p>
-              <p>Returns</p>
-              <p>Shipping Information</p>
-              <p>Product Subscriptions</p>
-              <p>Size Chart</p>
-              <p>Embroidery Services</p>
-              <p>Rod & Reel Repair</p>
-              <p>Boat & Boat Centers</p>
-              <p>Tracker Off-Road</p>
-             </div>
-
-             <div id="t12" >
-              <p>RESOURCES</p>
-              <p>Outdoor Tips</p>
-              <p>Gift Registry</p>
-              <p>Online Catalogs</p>
-              <p>Business Sales</p>
-              <p>Wildlife Creations</p>
-              <p>Military Discount</p>
-              <p>Restaurants</p>
-              <p>Used Guns</p>
-              <p>Outdoor Rewards</p>
-             </div>
-             
-             <div id="t13"  >
-              <p>ABOUT US</p>
-              <p>Find a Store</p>
-              <p>Careers</p>
-              <p>Company News</p>
-              <p>Bass Pro Shops Story</p>
-              <p>About Our Founder</p>
-              <p>Our Community</p>
-              <p>Conservation</p>
-              <p>Affiliate Program</p>
-              <p>Cabela’s</p>
-             </div>
-
-
-             <div id="t14" >
-              <p>SIGN UP EXCLUSIVE DEALS & OFFERS</p>
-              <input type="text" placeholder="Enter Your Email Address">
-              <p>You can unsubscribe at any time. Contact Us | Privacy Policy</p>
-              <hr>
-             <div id="t141"> <img src="https://tse2.mm.bing.net/th?id=OIP.LIecuH7gXi0BY7uY29WN8gHaND&pid=Api&P=0" alt="e">
-              <p>Sign Up for SMS Messaging</p></div>
-
-              <div id="t142"> <img src="https://tse2.mm.bing.net/th?id=OIP.LIecuH7gXi0BY7uY29WN8gHaND&pid=Api&P=0" alt="e">
-                <p>Get Our Free Catalog</p></div>
-
-                <div id="t143"> <img src="https://tse2.mm.bing.net/th?id=OIP.LIecuH7gXi0BY7uY29WN8gHaND&pid=Api&P=0" alt="e">
-                  <p>Download Our Mobile App</p></div>
-             
-            </div>
-           </div>
-           <hr>
-
-
-           <div id="thirt">
-            
-            <div id="tf">
-              <p><b>FOLLOW US</b> </p>
-            <img src="https://tse1.mm.bing.net/th?id=OIP.Ua5AXhtGRgPuisZVmetclQHaFL&pid=Api&rs=1&c=1&qlt=95&w=150&h=105" alt="">
-
-              <img src="https://tse1.mm.bing.net/th?id=OIP.P3GJZi8Z-DGPx1JS3u5yOgHaGl&pid=Api&rs=1&c=1&qlt=95&w=117&h=104" alt="">
-              <img src="https://tse1.mm.bing.net/th?id=OIP.aByvAl4Fl4Dk3N9fA3IudwHaFM&pid=Api&rs=1&c=1&qlt=95&w=166&h=116" alt="">
-              <img src="https://tse1.mm.bing.net/th?id=OIP.hYLk2-6qi3tEK0RXsi8mOwHaEK&pid=Api&rs=1&c=1&qlt=95&w=171&h=96" alt="">
-              <img src="https://tse1.mm.bing.net/th?id=OIP.lQRk_LuIIh-6LXK9jplxGAHaHZ&pid=Api&rs=1&c=1&qlt=95&w=121&h=121" alt="">
-            </div>
-
-            <div id="tr">
-             <p><b>Proud Partners</b> </p>
-            <p><b>TOYOTA</b></p>
-            <p><b>PROGRESSIVE</b></p>
-             
-            </div>
-            </div>
-          
-            <hr> 
-
-            <div id="lfooter">
-              <p>Gift Card Terms & Conditions</p>
-              <p> Recall Information</p>
-              <p> UPDATED Terms of Use + Community Guidelines</p>
-              <p> Accessibility Policy</p>
-              <p> UPDATED Privacy Policy</p>
-              <p> CA TSCA Disclosure</p>
-            </div>
-
-            <div id="lfooter1">
-            <p>Do Not Sell Or Share My Personal Information</p>
-            <p> Errors & Limitations</p>
-            <p> Site Map</p>
-            </div>
-
-            <div id="lll">
-              <p>If you are using a screen reader and are having problems using this website, please call 1-800-227-7776 for assistance</p>
-            </div>
-
-
-
-         
-   
-      
+
+
+
+
+
+
+
+      <a href="#0" target="_blank"><b>Boating</b></a>
+      <a href="#0" target="_blank"><b>Shooting</b></a>
+      <a href="#0" target="_blank"><b>Hunting</b></a>
+      <a href="#0" target="_blank"><b>Camping</b></a>
+      <a href="#0" target="_blank"><b>Clothing</b></a>
+      <a href="#0" target="_blank"><b>Footwear</b></a>
+      <a href="#0" target="_blank"><b>Ride</b></a>
+      <a href="#0" target="_blank"><b>Home & Gifts</b></a>
+      <a href="#0" target="_blank"><b>Bargain Cave</b></a>
+
+    </nav>
+
+
+
+
+    <hr>
+    <div id="firstblock">
+      <img
+        src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1920/v1673277784/DigitalCreative/2023/Homepage/wk2-1-11/BPS_Homepage-winter.png"
+        alt="">
+    </div>
+
+    <div id="two">
+      <p><b>HOT THIS WEEK</b> </p>
+    </div>
+    <hr>
+
+
+
+
+
+
+    <div id="third">
+      <img
+        src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1673968097/DigitalCreative/2023/Homepage/wk2-1-11/cep-banner.png"
+        alt="">
+    </div>
+
+    <div id="four">
+      <img
+        src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_945/v1673279793/DigitalCreative/2023/Homepage/wk2-1-11/After-hunt-sub.png"
+        alt="">
+      <img
+        src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_945/v1673279793/DigitalCreative/2023/Homepage/wk2-1-11/BPS_saltwater-sub.png"
+        alt="">
+    </div>
+
+    <div id="five">
+      <p><b>SHOP BY CATEGORY</b></p>
+    </div>
+
+    <div id="six">
+      <div><img
+          src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-archery.png"
+          alt="">
+        <p><b> ARCHERY</b></p>
+      </div>
+      <div><img
+          src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-optics.png"
+          alt="">
+        <p><b>OPTICS</b></p>
+      </div>
+      <div><img
+          src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-hunting-clothing.png"
+          alt="">
+        <p><b>HUNTING CLOTHING</b></p>
+      </div>
+      <div><img
+          src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-hunting-Waders.png"
+          alt="">
+        <p><b>HUNTING WADERS</b></p>
+      </div>
+      <div><img
+          src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1664485701/DigitalCreative/2022/Homepage/wk39/Cat-flannel.png"
+          alt="">
+        <p><b>FLANNEL</b></p>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div id="seven">
+      <img
+        src="https://assets.basspro.com/image/upload/c_scale,f_auto,h_88,q_auto,w_1054/v1668626316/DigitalCreative/2022/Homepage/Black-Friday/low-price-title.png"
+        alt="">
+    </div>
+
+    <div id="eight">
+      <p><b>OUR TOP BRANDS</b></p>
+    </div>
+
+    <div id="nine">
+      <img
+        src="https://assets.basspro.com/image/upload/f_auto,q_auto/v1667848670/DigitalCreative/Site-Elements/bps-logo-mobile.png"
+        alt="">
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/red-head/redhead-488.png"
+        alt="">
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/cabelas/cabelas-logo.svg"
+        alt="">
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/garmin/garmin.svg"
+        alt="">
+
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/columbia/columbia-blue.svg"
+        alt="">
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/vortex/vortex.svg"
+        alt="">
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/leupold/leupold-black-vertical.svg"
+        alt="">
+      <img
+        src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/logos/images/under-armour/underarmour-black.svg"
+        alt="">
+
+    </div>
+
+
+    <div id="ten">
+      <img src="./footer image.png" alt="" style="width:100%; height:100%">
+    </div>
+
+
+    <div id="ele">
+      <div id="e1">
+        <p><b>CONTACT BASS PRO SHOPS</b></p>
+      </div>
+
+      <div id="e2"><img src="https://tse1.mm.bing.net/th?id=OIP.G8P_Yslc7bxb7HjdkGtuHwHaG3&pid=Api&P=0" alt="">
+        <p>Live Chat</p>
+      </div>
+
+      <div id="e3"> <img src="https://tse2.mm.bing.net/th?id=OIP.iNiPGHKQk1i5f_ppXLl7ZgHaFn&pid=Api&P=0" alt="">
+        <p>Email Us</p>
+      </div>
+
+      <div id="e4"><img src="https://tse4.mm.bing.net/th?id=OIP.mxwvp9lmd-iy1EeIYuUe7wHaHa&pid=Api&P=0" alt="">
+        <p>1-800-227-7776</p>
+      </div>
+
+      <div id="e5"><img src="https://tse4.mm.bing.net/th?id=OIP.6I8GSRo273wTecfBSQ7k5wHaHa&pid=Api&P=0" alt="">
+        <p>FAQs</p>
+      </div>
+
+      <div id="e6">
+        <p>Support ID: UBD290659748</p>
+      </div>
+    </div>
+    <hr>
+
+
+
+
+    <div id="twelve">
+
+      <div id="t11">
+        <p>Help</p>
+        <p>Order Status</p>
+        <p>Returns</p>
+        <p>Shipping Information</p>
+        <p>Product Subscriptions</p>
+        <p>Size Chart</p>
+        <p>Embroidery Services</p>
+        <p>Rod & Reel Repair</p>
+        <p>Boat & Boat Centers</p>
+        <p>Tracker Off-Road</p>
+      </div>
+
+      <div id="t12">
+        <p>RESOURCES</p>
+        <p>Outdoor Tips</p>
+        <p>Gift Registry</p>
+        <p>Online Catalogs</p>
+        <p>Business Sales</p>
+        <p>Wildlife Creations</p>
+        <p>Military Discount</p>
+        <p>Restaurants</p>
+        <p>Used Guns</p>
+        <p>Outdoor Rewards</p>
+      </div>
+
+      <div id="t13">
+        <p>ABOUT US</p>
+        <p>Find a Store</p>
+        <p>Careers</p>
+        <p>Company News</p>
+        <p>Bass Pro Shops Story</p>
+        <p>About Our Founder</p>
+        <p>Our Community</p>
+        <p>Conservation</p>
+        <p>Affiliate Program</p>
+        <p>Cabela’s</p>
       </div>
 
 
+      <div id="t14">
+        <p>SIGN UP EXCLUSIVE DEALS & OFFERS</p>
+        <input type="text" placeholder="Enter Your Email Address">
+        <p>You can unsubscribe at any time. Contact Us | Privacy Policy</p>
+        <hr>
+        <div id="t141"> <img src="https://tse2.mm.bing.net/th?id=OIP.LIecuH7gXi0BY7uY29WN8gHaND&pid=Api&P=0" alt="e">
+          <p>Sign Up for SMS Messaging</p>
+        </div>
+
+        <div id="t142"> <img src="https://tse2.mm.bing.net/th?id=OIP.LIecuH7gXi0BY7uY29WN8gHaND&pid=Api&P=0" alt="e">
+          <p>Get Our Free Catalog</p>
+        </div>
+
+        <div id="t143"> <img src="https://tse2.mm.bing.net/th?id=OIP.LIecuH7gXi0BY7uY29WN8gHaND&pid=Api&P=0" alt="e">
+          <p>Download Our Mobile App</p>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+
+
+    <div id="thirt">
+
+      <div id="tf">
+        <p><b>FOLLOW US</b> </p>
+        <i class="fa-brands fa-facebook"></i>
+
+        <img src="https://tse1.mm.bing.net/th?id=OIP.P3GJZi8Z-DGPx1JS3u5yOgHaGl&pid=Api&rs=1&c=1&qlt=95&w=117&h=104"
+          alt="">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.aByvAl4Fl4Dk3N9fA3IudwHaFM&pid=Api&rs=1&c=1&qlt=95&w=166&h=116"
+          alt="">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.hYLk2-6qi3tEK0RXsi8mOwHaEK&pid=Api&rs=1&c=1&qlt=95&w=171&h=96"
+          alt="">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.lQRk_LuIIh-6LXK9jplxGAHaHZ&pid=Api&rs=1&c=1&qlt=95&w=121&h=121"
+          alt="">
+      </div>
+
+      <div id="tr">
+        <p><b>Proud Partners</b> </p>
+        <p><b>TOYOTA</b></p>
+        <p><b>PROGRESSIVE</b></p>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="lfooter">
+      <p>Gift Card Terms & Conditions</p>
+      <p> Recall Information</p>
+      <p> UPDATED Terms of Use + Community Guidelines</p>
+      <p> Accessibility Policy</p>
+      <p> UPDATED Privacy Policy</p>
+      <p> CA TSCA Disclosure</p>
+    </div>
+
+    <div id="lfooter1">
+      <p>Do Not Sell Or Share My Personal Information</p>
+      <p> Errors & Limitations</p>
+      <p> Site Map</p>
+    </div>
+
+    <div id="lll">
+      <p>If you are using a screen reader and are having problems using this website, please call 1-800-227-7776 for
+        assistance</p>
+    </div>
+
+
+
+
+
+
   </div>
+
+
+  </div>
+
+
 
 </body>
 
 </html>
 <script src="./login.js"></script>
+
 <script>
-  
- let men=document.getElementById("btn")
- let content=document.getElementById("content")
-  let bod=document.getElementsByTagName("body")
+  const search = () => {
+    let filter = document.getElementById("myInput").value.toUpperCase()
 
+    let nav = document.getElementById("fourthnavbar")
+    for (var i = 0; i < nav.length; i++) {
+      let a = nav[i].getElementByTagName("a")[0];
 
-men.addEventListener("mouseover",()=>{
-  content.style.display="flex"
-})
-content.addEventListener("mouseleave",()=>{
-  content.style.display="none"
-})
-bod[0].addEventListener("mouseleave",()=>{
-  content.style.display="none"
-})
+      let textvalue = a.textcontent || a.innerHTML
 
-
-
-
-
-
-
-
-let images=[
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2893831.json?$Prod_PLPThumb$" ,
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3358463.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$"
- 
-]
-
-let i=0;
-setInterval(function(){
-   document.getElementById("slideshow").src=images[i]
-   i++;
-   if(i==images.length){
-       i=0;
-   }
-},2000)
-
-let images1=[
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2893831.json?$Prod_PLPThumb$" ,
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3358463.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$"
-]
-
-let j=0;
-setInterval(function(){
-   document.getElementById("slide").src=images1[j]
-   j++;
-   if(j==images1.length){
-       j=0;
-   }
-},2500)
-
-let images2=[
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2893831.json?$Prod_PLPThumb$" ,
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3358463.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$"
-]
-let k=0;
-setInterval(function(){
-    document.getElementById("show").src=images2[k]
-    k++;
-    if(k==images2.length){
-        k=0;
+      if (textvalue.toUpperCase().indexof(filter) > -1) {
+        nav[i].style.display = "";
+      }
+      else {
+        nav[i].style.display = "none";
+      }
     }
-},2900)
-
-let images22=[
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2893831.json?$Prod_PLPThumb$" ,
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3358463.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$"
-]
-let kk=0;
-setInterval(function(){
-    document.getElementById("show2").src=images22[kk]
-    kk++;
-    if(kk==images22.length){
-        kk=0;
-    }
-},2400)
-
-let images223=[
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/2893831.json?$Prod_PLPThumb$" ,
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3358463.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3443007.json?$Prod_PLPThumb$",
-"https://assets.basspro.com/image/list/fn_select:jq:first(.%5b%5d%7Cselect(.public_id%20%7C%20endswith(%22main%22)))/3417444.json?$Prod_PLPThumb$"
-]
-let kkk=0;
-setInterval(function(){
-    document.getElementById("show3").src=images223[kkk]
-    kkk++;
-    if(kkk==images223.length){
-        kkk=0;
-    }
-},1800)
-
-
-
-
-
-
+  }
 </script>
