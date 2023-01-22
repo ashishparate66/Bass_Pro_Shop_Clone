@@ -2,7 +2,7 @@ let container = document.getElementById("grid_container")
 
 async function fetchData() {
 
-    let data = await fetch("./API.json")
+    let data = await fetch("/API/API.json")
     let finalData = await data.json()
     makecards(finalData.fishing)
 }
