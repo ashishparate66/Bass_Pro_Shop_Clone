@@ -367,14 +367,93 @@ h2 {
   height: 30px;
 }
 
-/* fotter section */
+/* ===================================fotter section================== */
+
+
+#twelve {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+#t14 img {
+  width: 20px;
+  height: 30px;
+  padding-left: 20px;
+}
+
+#t141 {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#t142 {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#t143 {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#thirt {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#tr {
+
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  padding-right: 80px;
+  font-weight: 300;
+}
+
+#tf {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 400px;
+}
+
+#tf img {
+  width: 40px;
+  height: 30px;
+
+}
+
+#tf #facebook {
+  width: 50px;
+  height: 35px;
+}
+
+#lfooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+#lfooter1 {
+  display: flex;
+  padding-left: 15px;
+  width: 40%;
+  justify-content: space-around;
+}
+
+#lll {
+  padding-left: 20px;
+}
 
 
 
-
-
-
-
+/* ========================footer end===================== */
 @media only screen and (max-width : 600px) {
 
 /* ============ nav bar===========  */
