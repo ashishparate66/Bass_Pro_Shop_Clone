@@ -362,7 +362,6 @@ function fishing_pro1() {
               <button id="ad_btn_fish">Add Product</button>
               <button id="de_btn_fish">Delete Product</button>
               <button id="up_btn_fish">Update Product</button>
-             
         </div>
       `;
     document.querySelector("#Right").innerHTML = "";
