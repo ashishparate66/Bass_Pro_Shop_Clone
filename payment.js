@@ -30,7 +30,7 @@ function verifyOTP(){
     var myOTP = document.getElementById("enter").value
     if( originalOTP.innerHTML == myOTP){
         alert("Order is Place Succefully")
-        window.location.href="cart.html"
+        window.location.href="index.html"
     }
     else{
         alert("Wrong OTP")
