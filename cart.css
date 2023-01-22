@@ -1,8 +1,14 @@
 * {
   font-family: sans-serif;
+
 }
 
-/* nav bar */
+/* ==================nav bar =============================*/
+
+#nav_container{
+  width: 90%;
+  margin: auto;
+}
 #topnavbar {
 
   color: white;
@@ -84,9 +90,9 @@ a {
 
 #thirdleft {
 
-  width: 7%;
-  padding-left: 40px;
-
+width: 5%;
+border-radius: 10px;
+padding-left: 20px;
 
 }
 
@@ -409,52 +415,78 @@ h2 {
 #tr {
 
   display: flex;
+
   width: 400px;
-  justify-content: space-around;
-  padding-right: 80px;
+  justify-content: space-between;
+ 
   font-weight: 300;
 }
 
 #tf {
   display: flex;
-
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: auto;
   width: 400px;
+ 
 }
 
-#tf img {
-  width: 40px;
-  height: 30px;
+#footer_main{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 
-}
+  padding-bottom: 30px;
+ line-height: 10px;
+ margin-top: 20px;
 
-#tf #facebook {
-  width: 50px;
-  height: 35px;
 }
 
 #lfooter {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  line-height: 1.2;
+  
 }
+
 
 #lfooter1 {
   display: flex;
-  padding-left: 15px;
-  width: 40%;
-  justify-content: space-around;
+
+  width: 60%;
+  justify-content: space-between;
+  line-height: 1.2;
+ margin: 10px 0px;
+ 
 }
 
 #lll {
-  padding-left: 20px;
+
+  line-height: 1.2;
+  margin: 0px;
+}
+#lfooter p{
+  margin: 0;
+  padding: 0;
+}
+#lfooter1 p{
+  margin: 0;
+  padding: 0;
+}
+#lll p{
+  margin: 0;
+  padding: 0;
+}
+
+
+#t14 input{
+  padding: 6px;
+  border-radius: 3px;
+  
 }
 
 
 
 /* ========================footer end===================== */
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 720px) {
 
 /* ============ nav bar===========  */
 
@@ -498,7 +530,7 @@ display: none;
 
 }
 
-@media screen and (min-width:600px) and (max-width:1000px) {
+@media screen and (min-width:720px) and (max-width:1080px) {
   
   /* ============nav bar================= */
   #secondnavbar{
