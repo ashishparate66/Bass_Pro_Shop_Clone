@@ -192,14 +192,15 @@ h3:hover {
 
 #heading-box{
   height: 100px;
-  width:90%;
+  width: 90%;
   margin: auto;
-  border:1px solid black;
+  border: 1px solid black;
+  border-radius: 9px;
   margin-top: 10px;
   display: flex;
   /* background: linear-gradient(to left, rgb(182 193 70), rgb(231, 170, 231)); */
   color: rgb(111, 8, 8);
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  /* box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;*/
 }
 #head-img{
   align-items: row;
