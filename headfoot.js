@@ -1,46 +1,20 @@
-let container = document.getElementById("grid_container")
+//============================ nav bar =====================
 
-async function fetchData() {
-
-    let data = await fetch("./API.json")
-    let finalData = await data.json()
-    makecards(finalData.fishing)
-}
-fetchData()
-
-function makecards(data) {
-    let dataarr = []
-    data.forEach(item => {
-        dataarr.push(constCard(item.img, item.title))
-    });
-    container.innerHTML = dataarr.join("")
-}
-
-function constCard(image, title) {
-
-    let card = `
-    <div id="smallblock" >
-    <img src=${image} alt="" />
-    <h3 id="title" >${title}</h3>
-    </div>
-    `
-    return card
-}
 let men = document.getElementById("btn")
 let content = document.getElementById("content")
 let bod = document.getElementsByTagName("body")
 
 
 men.addEventListener("click", () => {
-    content.style.visibility = "visible"
-    content.style.display = "flex"
+  content.style.visibility = "visible"
+  content.style.display = "flex"
 })
 
 content.addEventListener("mouseleave", () => {
-    content.style.visibility = "hidden"
+  content.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content.style.visibility = "hidden"
+  content.style.visibility = "hidden"
 })
 
 
@@ -51,14 +25,14 @@ bod = document.getElementsByTagName("body")
 
 
 men1.addEventListener("click", () => {
-    content1.style.visibility = "visible"
-    content1.style.display = "flex"
+  content1.style.visibility = "visible"
+  content1.style.display = "flex"
 })
 content1.addEventListener("mouseleave", () => {
-    content1.style.visibility = "hidden"
+  content1.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content1.style.visibility = "hidden"
+  content1.style.visibility = "hidden"
 })
 
 
@@ -68,14 +42,14 @@ bod = document.getElementsByTagName("body")
 
 
 men2.addEventListener("click", () => {
-    content2.style.visibility = "visible"
-    content2.style.display = "flex"
+  content2.style.visibility = "visible"
+  content2.style.display = "flex"
 })
 content2.addEventListener("mouseleave", () => {
-    content2.style.visibility = "hidden"
+  content2.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content2.style.visibility = "hidden"
+  content2.style.visibility = "hidden"
 })
 
 
@@ -85,14 +59,14 @@ bod = document.getElementsByTagName("body")
 
 
 men3.addEventListener("click", () => {
-    content3.style.visibility = "visible"
-    content3.style.display = "flex"
+  content3.style.visibility = "visible"
+  content3.style.display = "flex"
 })
 content3.addEventListener("mouseleave", () => {
-    content3.style.visibility = "hidden"
+  content3.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content3.style.visibility = "hidden"
+  content3.style.visibility = "hidden"
 })
 
 let men4 = document.getElementById("btn4")
@@ -101,14 +75,14 @@ bod = document.getElementsByTagName("body")
 
 
 men4.addEventListener("click", () => {
-    content4.style.visibility = "visible"
-    content4.style.display = "flex"
+  content4.style.visibility = "visible"
+  content4.style.display = "flex"
 })
 content4.addEventListener("mouseleave", () => {
-    content4.style.visibility = "hidden"
+  content4.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content4.style.visibility = "hidden"
+  content4.style.visibility = "hidden"
 })
 
 let men5 = document.getElementById("btn5")
@@ -117,14 +91,14 @@ bod = document.getElementsByTagName("body")
 
 
 men5.addEventListener("click", () => {
-    content5.style.visibility = "visible"
-    content5.style.display = "flex"
+  content5.style.visibility = "visible"
+  content5.style.display = "flex"
 })
 content5.addEventListener("mouseleave", () => {
-    content5.style.visibility = "hidden"
+  content5.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content5.style.visibility = "hidden"
+  content5.style.visibility = "hidden"
 })
 
 
@@ -135,14 +109,14 @@ bod = document.getElementsByTagName("body")
 
 
 men6.addEventListener("click", () => {
-    content6.style.visibility = "visible"
-    content6.style.display = "flex"
+  content6.style.visibility = "visible"
+  content6.style.display = "flex"
 })
 content6.addEventListener("mouseleave", () => {
-    content6.style.visibility = "hidden"
+  content6.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content6.style.visibility = "hidden"
+  content6.style.visibility = "hidden"
 })
 
 
@@ -153,14 +127,14 @@ bod = document.getElementsByTagName("body")
 
 
 men7.addEventListener("click", () => {
-    content7.style.visibility = "visible"
-    content7.style.display = "flex"
+  content7.style.visibility = "visible"
+  content7.style.display = "flex"
 })
 content7.addEventListener("mouseleave", () => {
-    content7.style.visibility = "hidden"
+  content7.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content7.style.visibility = "hidden"
+  content7.style.visibility = "hidden"
 })
 
 let men8 = document.getElementById("btn8")
@@ -169,14 +143,14 @@ bod = document.getElementsByTagName("body")
 
 
 men8.addEventListener("click", () => {
-    content8.style.visibility = "visible"
-    content8.style.display = "flex"
+  content8.style.visibility = "visible"
+  content8.style.display = "flex"
 })
 content8.addEventListener("mouseleave", () => {
-    content8.style.visibility = "hidden"
+  content8.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content8.style.visibility = "hidden"
+  content8.style.visibility = "hidden"
 })
 
 
@@ -187,12 +161,16 @@ bod = document.getElementsByTagName("body")
 
 
 men9.addEventListener("click", () => {
-    content9.style.visibility = "visible"
-    content9.style.display = "flex"
+  content9.style.visibility = "visible"
+  content9.style.display = "flex"
 })
 content9.addEventListener("mouseleave", () => {
-    content9.style.visibility = "hidden"
+  content9.style.visibility = "hidden"
 })
 bod[0].addEventListener("mouseleave", () => {
-    content9.style.visibility = "hidden"
+  content9.style.visibility = "hidden"
 })
+
+
+
+// ===============nav bar enad==========================
